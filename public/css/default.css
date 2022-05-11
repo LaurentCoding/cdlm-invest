@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: #636466;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_fluid {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 820px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    width: 1240px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1420px;
+  }
+}
+
+.w_100 {
+  width: 100%;
+}
+
+.w_75 {
+  width: 70%;
+}
+
+.w_50 {
+  width: 50%;
+}
+
+.w_25 {
+  width: 25%;
+}
+
+.w_15 {
+  width: 15%;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.h_100 {
+  height: 100%;
+}
+
+.d_block {
+  display: block;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.m_5 {
+  margin: 5px;
+}
+
+.m_10 {
+  margin: 10px;
+}
+
+.m_15 {
+  margin: 15px;
+}
+
+.mr_5 {
+  margin-right: 5px;
+}
+
+.mr_10 {
+  margin-right: 10px;
+}
+
+.ml_5 {
+  margin-left: 5px;
+}
+
+.ml_10 {
+  margin-left: 10px;
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.my_20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mb_5 {
+  margin-bottom: 5px;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.p_5 {
+  padding: 5px;
+}
+
+.p_10 {
+  padding: 10px;
+}
+
+.p_15 {
+  padding: 15px;
+}
+
+.p_30 {
+  padding: 30px;
+}
+
+.py_20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pt_20 {
+  padding-top: 20px;
+}
+
+.pl_5 {
+  padding-left: 5px;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_row_nowrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.flex_column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.align_items_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align_items_end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.justify_content_start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify_content_center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify_content_between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify_content_around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify_content_end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex_fill {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.img_rounded_50 {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.img_rounded_250 {
+  border-radius: 50%;
+  width: 250px;
+}
+
+.img_rounded_150 {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 1px solid #589fce;
+  padding: 5px 10px;
+  min-width: 50px;
+  text-align: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn_primary {
+  background: #a2d4f5;
+  color: #cab957;
+}
+
+.btn_secondary {
+  background: #cab957;
+  color: black;
+}
+
+.btn_success {
+  background: #65a32f;
+}
+
+.btn_warning {
+  background: #d1a52c;
+}
+
+.btn_danger {
+  background: #af3438;
+}
+
+.d1 {
+  background: red;
+}
+
+.d2 {
+  background: blue;
+}
+
+.d3 {
+  background: orange;
+}
+
+.d4 {
+  background: yellow;
+}
+
+.separator_primary {
+  display: block;
+  background: #a2d4f5;
+  border-radius: 1px;
+  height: 2px;
+}
+
+.separator_secondary {
+  display: block;
+  background: #cab957;
+  border-radius: 1px;
+  height: 2px;
+}
+
+.bg_gray {
+  background: #eee;
+}
+
+.bg_primary {
+  background: #a2d4f5;
+}
+
+.br_5 {
+  border-radius: 5px;
+}
+
+.br_10 {
+  border-radius: 10px;
+}
+
+.br_20 {
+  border-radius: 20px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_end {
+  text-align: end;
+}
+
+.text_warning {
+  color: #d1a52c;
+}
+
+.alert {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.alert_warning {
+  border-color: #d1a52c;
+  color: #d1a52c;
+}
+
+.alert_success {
+  border-color: #65a32f;
+  color: #65a32f;
+}
+
+.alert_danger {
+  color: #af3438;
+  border-color: #af3438;
+}
+
+input {
+  border: 1px solid #cab957;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#img_404 {
+  max-width: 300px;
+}
+
+#header_logo {
+  max-width: 150px;
+}
+
+#sidebar {
+  background: #589fce;
+}
+
+#sidebar .active {
+  background: #eee;
+}
+
+#sidebar .active:hover {
+  background: #eee;
+}
+
+#sidebar a {
+  width: 100%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#sidebar a:hover {
+  background: #a2d4f5;
+}
+
+#btn_logout {
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+#btn_logout:hover {
+  background: #a2d4f5;
+  color: #cab957;
+  border-radius: 5px;
+}
+
+#avatar_sidebar {
+  -webkit-box-shadow: -1px 3px 19px 4px #eee;
+          box-shadow: -1px 3px 19px 4px #eee;
+  border: 1px solid #eee;
+}
+
+#content {
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+}
+/*# sourceMappingURL=default.css.map */

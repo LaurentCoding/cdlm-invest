@@ -1,0 +1,66 @@
+// import des variable
+@import import/_variable
+// reset CSS
+@import import/_reset
+// gestion container & width
+@import import/_width
+// gestion margin-padding-flex
+@import import/_flex_m_p
+// class pour les images
+@import import/_img
+// class pour les BTN
+@import import/_btn
+// style debug
+@import import/_debug
+// style sidebar
+@import import/_sidebar
+// separator
+@import import/_separator
+// background
+@import import/_bg
+// border-radius
+@import import/_br
+// style text
+@import import/_text
+// alert
+@import import/_alert
+// input
+@import import/_input
+// 404
+#img_404
+    max-width: 300px
+// header
+#header_logo
+    max-width: 150px
+
+
+// sidebar
+#sidebar
+    background: $primary_light
+    .active
+        background: $color_gray
+    .active:hover
+        background: $color_gray
+    a
+        width: 100%
+        transition: all .4s
+        padding: 10px
+        border-radius: 5px 0px 0px 5px 
+    a:hover
+        background: $primary
+#btn_logout
+    text-align: center
+    border-radius: 50%
+    padding: 5px
+#btn_logout:hover
+    background: $primary
+    color: $secondary
+    border-radius: $border_radius_btn
+#avatar_sidebar
+    box-shadow: -1px 3px 19px 4px $color_gray
+    border: 1px solid $color_gray
+
+// content
+#content
+    overflow: hidden
+    box-shadow: 1px 1px 6px $color_dark
