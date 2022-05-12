@@ -4,7 +4,7 @@ CREATE TABLE `user`(
     `name` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `company` VARCHAR(255) NOT NULL,
-    `is_admin` TINYINT(1) NOT NULL,
+    `is_admin` INT(1) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `avatar` VARCHAR(255) NOT NULL
 );
@@ -25,7 +25,7 @@ CREATE TABLE `projet`(
     `user_id` INT NOT NULL,
     `nom_projet` VARCHAR(255) NOT NULL,
     `description_projet` VARCHAR(255) NOT NULL,
-    `investissement` DOUBLE(8, 2) NOT NULL,
+    `investissement` VARCHAR(100) NOT NULL,
     `duree` INT NOT NULL
 );
 ALTER TABLE
