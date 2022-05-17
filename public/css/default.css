@@ -167,6 +167,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.mb_30 {
+  margin-bottom: 30px;
+}
+
 .mt_20 {
   margin-top: 20px;
 }
@@ -601,42 +605,6 @@ input {
 
 #header_logo {
   max-width: 150px;
-}
-
-#sidebar {
-  background: #589fce;
-}
-
-#sidebar .active {
-  background: #eee;
-}
-
-#sidebar .active:hover {
-  background: #eee;
-}
-
-#sidebar a {
-  width: 100%;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  padding: 10px;
-  border-radius: 5px 0px 0px 5px;
-}
-
-#sidebar a:hover {
-  background: #a2d4f5;
-}
-
-#btn_logout {
-  text-align: center;
-  border-radius: 50%;
-  padding: 5px;
-}
-
-#btn_logout:hover {
-  background: #a2d4f5;
-  color: #cab957;
-  border-radius: 5px;
 }
 
 #avatar_sidebar {
