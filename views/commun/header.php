@@ -28,8 +28,10 @@
         </nav>
         <nav class="Menu">
             <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>gestion">Gestion</a>
+                <li class="m_10">
+                    <a href="<?= URL ?>gestion">Gestion</a>
                     <ul>
+                        <li><a href="<?= URL ?>">Gestion</a></li>
                         <li><a href="<?= URL ?>">Comptabilité</a></li>
                         <li><a href="<?= URL ?>">Rémunérer</a></li>
                         <li><a href="<?= URL ?>">Recruter</a></li>

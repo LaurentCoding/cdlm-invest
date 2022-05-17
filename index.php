@@ -14,6 +14,8 @@ $userController = new UtilisateurController;
 require_once "./controllers/admin/admin.controller.php";
 $adminController = new AdministrateurController;
 // ----------------
+// require_once "./controllers/visiteur/visitor.controller.php";
+// $visiteurController = new VisiteurController;
 
 
 // GESTION DES ROUTES ---------------------------------------------------------------------------------------------------------
