@@ -1,0 +1,97 @@
+
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 6rem
+  background-color: $color_grisf
+  padding: 10px
+  box-shadow: 6px 6px 8px $color_grisc
+  z-index: 10
+
+
+.menu 
+
+  /* On centre le texte dans la colonne */
+  &_accordeon
+    padding: 0
+    margin: 0
+    text-align: center
+    width: 180px
+    /* On applique les mêmes propriétés que le premier UL */
+    ul
+      display: flex
+      flex-direction: column
+      padding: 0
+      margin: 0
+      text-align: center
+      li
+        background-color: $color_grisf
+        border-radius: 6px
+        margin-bottom: 2px
+        box-shadow: 3px 3px 3px $color_grisc
+        
+      li
+        max-height: 0
+        overflow: hidden
+        transition: all .5s
+        border-radius: 0
+        background-color: $color_grisf
+        border: none
+        margin: 0
+        
+
+.menu
+  &_accordeon
+    ul
+      li
+        a
+          font-size: 1em
+
+.menu
+  &_accordeon
+    li:hover 
+      background: $color_grisc
+
+.menu
+  &_accordeon
+    li:hover 
+      li 
+        a
+          font-size: 1em
+
+.menu
+  &-accordeon
+    li
+      li:hover 
+        background: $color_grisf
+
+.menu
+  &_accordeon
+    ul
+      li:last-child
+        border-radius: 0 0 6px 6px
+        border: none
+
+.menu
+  &_accordeon
+    li:hover 
+      li
+        max-height: 15em
+
+
+
+@media screen and (max-width: $small) 
+    .header 
+      height: 80px
+    &_logo
+        width: 100px
+
+
+
+  
+
+
+  

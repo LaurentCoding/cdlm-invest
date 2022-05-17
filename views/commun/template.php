@@ -13,16 +13,15 @@
         <!-- page sidebar + content -->
 
 
-        <div class="d_flex flex_fill justify_content_start container bg_gray br_10" id="content">
+        <div class="d_flex flex_fill justify_content_start container">
             <!-- sidebar vertical -->
-            <?php require "./views/commun/sidebar.php" ?>
             <!-- partie contenu de la page -->
             <div class="d_flex flex_column flex_fill align_items_center">
-            <?php if(isset($page_titre)){ echo "<h1 class='mb_10 mt_20'>".$page_titre."</h1>"; } ?>
+            <!-- <?php if(isset($page_titre)){ echo "<h1 class='mb_10 mt_20'>".$page_titre."</h1>"; } ?> -->
             <?php
             if (!empty($_SESSION['alert'])) {
                 foreach ($_SESSION['alert'] as $alert) {
-                    echo "<div class='alert " . $alert['type'] . " m_10' role='alert'>
+                    echo "<div class='alert' " . $alert['type'] . " m_10' role='alert'>
                         " . $alert['message'] . "
                     </div>";
                 }

@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Roboto:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +22,16 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+h1 {
+  font-family: 'Lemon', cursive;
+}
+
+.form_name {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #4a323c;
 }
 
 .container_fluid {
@@ -309,6 +321,18 @@ a {
   background: #af3438;
 }
 
+.btn_connexion {
+  background: white;
+  color: #4a323c;
+}
+
+.btn_valid {
+  display: inline-block;
+  background-color: rgba(128, 133, 142, 0.5);
+  color: #4a323c;
+  font-size: 1.5rem;
+}
+
 .d1 {
   background: red;
 }
@@ -323,6 +347,160 @@ a {
 
 .d4 {
   background: yellow;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: #80858e;
+  padding: 10px;
+  -webkit-box-shadow: 6px 6px 8px rgba(128, 133, 142, 0.5);
+          box-shadow: 6px 6px 8px rgba(128, 133, 142, 0.5);
+  z-index: 10;
+}
+
+.menu {
+  /* On centre le texte dans la colonne */
+}
+
+.menu_accordeon {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 180px;
+  /* On applique les mêmes propriétés que le premier UL */
+}
+
+.menu_accordeon ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu_accordeon ul li {
+  background-color: #80858e;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  -webkit-box-shadow: 3px 3px 3px rgba(128, 133, 142, 0.5);
+          box-shadow: 3px 3px 3px rgba(128, 133, 142, 0.5);
+}
+
+.menu_accordeon ul li {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-radius: 0;
+  background-color: #80858e;
+  border: none;
+  margin: 0;
+}
+
+.menu_accordeon ul li a {
+  font-size: 1em;
+}
+
+.menu_accordeon li:hover {
+  background: rgba(128, 133, 142, 0.5);
+}
+
+.menu_accordeon li:hover li a {
+  font-size: 1em;
+}
+
+.menu-accordeon li li:hover {
+  background: #80858e;
+}
+
+.menu_accordeon ul li:last-child {
+  border-radius: 0 0 6px 6px;
+  border: none;
+}
+
+.menu_accordeon li:hover li {
+  max-height: 15em;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    height: 80px;
+  }
+  _logo {
+    width: 100px;
+  }
+}
+
+.accueil {
+  margin-top: 150px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.accueil_titre {
+  width: 70%;
+  margin-left: 10%;
+  color: #4a323c;
+  font-size: 2.5rem;
+}
+
+.accueil_para {
+  margin-top: 150px;
+  width: 85%;
+  color: #7a965f;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media screen and (max-width: 576px) {
+  .inscription_titre {
+    color: #4a323c;
+    font-size: 2.5rem;
+    margin-top: 130px;
+  }
+  .inscription_titre_form {
+    font-size: 2rem;
+    width: 80%;
+  }
+  form input {
+    background-color: rgba(128, 133, 142, 0.5);
+    border: none;
+    height: 50px;
+    width: 100%;
+  }
+  button {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .connexion_titre {
+    color: #4a323c;
+    font-size: 2.5rem;
+    margin-top: 130px;
+  }
+  .connexion_titre_form {
+    font-size: 2rem;
+  }
+  .connexion_titre .btn {
+    padding: 0 20px;
+  }
+}
+
+footer {
+  height: 80px;
+  background-color: #4a323c;
 }
 
 .separator_primary {
