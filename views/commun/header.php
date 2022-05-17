@@ -12,7 +12,7 @@
         <div class="d_flex justify_content_center">
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>accueil" class="btn btn_connexion">Accueil</a>
+                    <li><a href="<?= URL ?>accueil">Accueil</a>
                         <ul>
                             <li><a href="<?= URL ?>sommeNous">Qui sommes-nous?</a></li>
                             <li><a href="<?= URL ?>">Notre histoire</a></li>
@@ -23,7 +23,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>actualites" class="btn btn_connexion">Actualités</a>
+                    <li><a href="<?= URL ?>actualites">Actualités</a>
                         <ul>
                             <li><a href="">Juridiques</a></li>
                             <li><a href="">Economiques</a></li>
@@ -34,7 +34,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>gestion" class="btn btn_connexion">Gestion</a>
+                    <li><a href="<?= URL ?>gestion">Gestion</a>
                         <ul>
                             <li><a href="<?= URL ?>">Comptabilité</a></li>
                             <li><a href="<?= URL ?>">Rémunérer</a></li>
@@ -45,7 +45,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>etudiant" class="btn btn_connexion">Etudiants</a>
+                    <li><a href="<?= URL ?>etudiant">Etudiants</a>
                         <ul>
                             <li><a href="<?= URL ?>">Entreprenariat Féminin</a></li>
                             <li><a href="<?= URL ?>">Entreprenariat Masculin</a></li>
@@ -56,7 +56,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>coaching" class="btn btn_connexion">Coaching</a>
+                    <li><a href="<?= URL ?>coaching">Coaching</a>
                         <ul>
                             <li><a href="<?= URL ?>">Coaching-1</a></li>
                             <li><a href="<?= URL ?>">Coaching-2</a></li>
