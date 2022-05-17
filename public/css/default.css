@@ -350,20 +350,24 @@ h1 {
 }
 
 header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 6rem;
-  background-color: #80858e;
+  background-color: rgba(128, 133, 142, 0.5);
   padding: 10px;
-  -webkit-box-shadow: 6px 6px 8px rgba(128, 133, 142, 0.5);
-          box-shadow: 6px 6px 8px rgba(128, 133, 142, 0.5);
+  -webkit-box-shadow: 6px 6px 8px #80858e;
+          box-shadow: 6px 6px 8px #80858e;
   z-index: 10;
 }
 
-.menu {
-  /* On centre le texte dans la colonne */
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu_accordeon {
@@ -382,20 +386,20 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0;
-  margin: 0;
   text-align: center;
 }
 
-.menu_accordeon ul li {
+.menu_accordeon li {
   background-color: #80858e;
-  border-radius: 6px;
-  margin-bottom: 2px;
-  -webkit-box-shadow: 3px 3px 3px rgba(128, 133, 142, 0.5);
-          box-shadow: 3px 3px 3px rgba(128, 133, 142, 0.5);
+  -webkit-box-shadow: 3px 3px 3px #80858e;
+          box-shadow: 3px 3px 3px #80858e;
 }
 
-.menu_accordeon ul li {
+.menu_accordeon li a {
+  color: white;
+}
+
+.menu_accordeon li li {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: all .5s;
@@ -411,7 +415,7 @@ header {
 }
 
 .menu_accordeon li:hover {
-  background: rgba(128, 133, 142, 0.5);
+  background-color: rgba(128, 133, 142, 0.5);
 }
 
 .menu_accordeon li:hover li a {
@@ -419,7 +423,7 @@ header {
 }
 
 .menu-accordeon li li:hover {
-  background: #80858e;
+  background-color: rgba(128, 133, 142, 0.5);
 }
 
 .menu_accordeon ul li:last-child {
@@ -491,7 +495,7 @@ header {
     margin-top: 130px;
   }
   .connexion_titre_form {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
   .connexion_titre .btn {
     padding: 0 20px;
@@ -499,8 +503,21 @@ header {
 }
 
 footer {
-  height: 80px;
   background-color: #4a323c;
+  color: white;
+}
+
+footer a {
+  color: white;
+  font-size: 0.8em;
+}
+
+footer .newsletter {
+  font-size: 1.2em;
+}
+
+.footer_logo {
+  color: #a6d9f7;
 }
 
 .separator_primary {

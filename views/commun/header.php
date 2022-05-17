@@ -3,16 +3,11 @@
     <div>
         <a class="home_logo" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo" class="header_logo"></a>
     </div>
-    <?php if (!is_connected()) : ?>
-        
-        <div class="connection" id="connection">
-            <a href="<?= URL ?>connexion" class="btn btn_connexion"><i class="fa-solid fa-power-off mr_5"></i>Se connecter</a>
-            <a href="<?= URL ?>inscription" class="btn btn_connexion">S'inscrire</a>
-        </div>
-        <div class="d_flex justify_content_center">
+   
+        <div class="home">
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>accueil">Accueil</a>
+                    <li class="m_10"><a href="<?= URL ?>accueil" >Accueil</a>
                         <ul>
                             <li><a href="<?= URL ?>sommeNous">Qui sommes-nous?</a></li>
                             <li><a href="<?= URL ?>">Notre histoire</a></li>
@@ -23,7 +18,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>actualites">Actualités</a>
+                    <li class="m_10"><a href="<?= URL ?>actualites" >Actualités</a>
                         <ul>
                             <li><a href="">Juridiques</a></li>
                             <li><a href="">Economiques</a></li>
@@ -34,7 +29,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>gestion">Gestion</a>
+                    <li class="m_10"><a href="<?= URL ?>gestion">Gestion</a>
                         <ul>
                             <li><a href="<?= URL ?>">Comptabilité</a></li>
                             <li><a href="<?= URL ?>">Rémunérer</a></li>
@@ -45,7 +40,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>etudiant">Etudiants</a>
+                    <li class="m_10"><a href="<?= URL ?>etudiant" >Etudiants</a>
                         <ul>
                             <li><a href="<?= URL ?>">Entreprenariat Féminin</a></li>
                             <li><a href="<?= URL ?>">Entreprenariat Masculin</a></li>
@@ -56,7 +51,7 @@
             </nav>
             <nav class="Menu">
                 <ul class="menu_accordeon">
-                    <li><a href="<?= URL ?>coaching">Coaching</a>
+                    <li class="m_10"><a href="<?= URL ?>coaching">Coaching</a>
                         <ul>
                             <li><a href="<?= URL ?>">Coaching-1</a></li>
                             <li><a href="<?= URL ?>">Coaching-2</a></li>
@@ -65,11 +60,24 @@
                     </li>
                 </ul>
             </nav>
-            <div>
-                <a href="<?= URL ?>projet" class="btn btn_connexion">Projet</a>
-                <a href="<?= URL ?>contact" class="btn btn_connexion">Contact</a>
+            <nav class="Menu">
+                <ul class="menu_accordeon">
+                    <li class="m_10"><a href="<?= URL ?>projet">Projet</a>                      
+                    </li>
+                </ul>
+            </nav>
+            <nav class="Menu">
+                <ul class="menu_accordeon">
+                    <li class="m_10"><a href="<?= URL ?>contact">Contact</a>                    
+                    </li>
+                </ul>
+            </nav>
             </div>
-        </div>
-    <?php endif ?>
-    
 </header>
+<?php if (!is_connected()) : ?>
+        
+        <div class="connection" id="connection">
+            <a href="<?= URL ?>connexion" class="btn btn_connexion"><i class="fa-solid fa-power-off mr_5"></i>Se connecter</a>
+            <a href="<?= URL ?>inscription" class="btn btn_connexion">S'inscrire</a>
+        </div>
+<?php endif ?>
