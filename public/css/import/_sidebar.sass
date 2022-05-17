@@ -1,20 +1,22 @@
 
 
 header
-  position: fixed
+  
   top: 0
   left: 0
   width: 100%
   height: 6rem
-  background-color: $color_grisf
+  background-color: $color_grisc
   padding: 10px
-  box-shadow: 6px 6px 8px $color_grisc
+  box-shadow: 6px 6px 8px $color_grisf
   z-index: 10
 
-
-.menu 
-
-  /* On centre le texte dans la colonne */
+.home
+  display: flex
+  align-items: center
+  
+.menu
+  
   &_accordeon
     padding: 0
     margin: 0
@@ -24,14 +26,13 @@ header
     ul
       display: flex
       flex-direction: column
-      padding: 0
-      margin: 0
       text-align: center
-      li
-        background-color: $color_grisf
-        border-radius: 6px
-        margin-bottom: 2px
-        box-shadow: 3px 3px 3px $color_grisc
+    li
+      background-color: $color_grisf
+      
+      box-shadow: 3px 3px 3px $color_grisf
+      a
+        color: $color_white
         
       li
         max-height: 0
@@ -53,7 +54,7 @@ header
 .menu
   &_accordeon
     li:hover 
-      background: $color_grisc
+      background-color: $color_grisc
 
 .menu
   &_accordeon
@@ -65,8 +66,8 @@ header
 .menu
   &-accordeon
     li
-      li:hover 
-        background: $color_grisf
+      li:hover
+        background-color: $color_grisc
 
 .menu
   &_accordeon
