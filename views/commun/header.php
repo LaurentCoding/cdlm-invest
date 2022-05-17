@@ -68,12 +68,12 @@
     </div>
 </header>
 
-<div class="d_flex container">
+<div class="d_flex container justify_content_end align_items_end">
     <?php if (!is_connected()) { ?>
         <a href="<?= URL ?>connexion" class="btn btn_connexion m_5"><i class="fa-solid fa-power-off mr_5"></i>Se connecter</a>
         <a href="<?= URL ?>inscription" class="btn btn_connexion m_5">S'inscrire</a>
     <?php } else { ?>
-        <a href="<?= URL ?>projet" class="btn btn_connexion m_5">Projets</a>
+        <a href="<?= URL ?>user/projet" class="btn btn_connexion m_5">Projets</a>
         <a href="<?= URL ?>logout" class="btn btn_connexion m_5">Déconnexion</a>
     <?php } ?>
 </div>
