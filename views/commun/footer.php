@@ -1,5 +1,7 @@
-<footer class="d_flex justify_content_end p_30">
+<footer class="d_flex  footer">
     <div class="d_flex justify_content_center align_items_center">
+        <p>CDLM@Invest</p>
+        <p>Tous droits réservés.</p>
         <span class="mr_5">FINTECH</span> <i class="fa-solid fa-copyright mr_5"></i><span>2022</span>
     </div>
 </footer>
