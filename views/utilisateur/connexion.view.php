@@ -1,4 +1,3 @@
-<h1 class="connexion_titre">Connexion</h1>
 <form class="connexion_form mt_20 p_30" action="<?= URL ?>goConnexion" method="POST" class="d_flex align_items_center justify_content_center flex_column">
     <table>
         <tr>
