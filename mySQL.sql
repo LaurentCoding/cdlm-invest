@@ -1,30 +1,30 @@
 CREATE TABLE `user`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `surname` VARCHAR(255) NOT NULL,
-    `name` VARCHAR(255) NOT NULL,
-    `email` VARCHAR(255) NOT NULL,
-    `company` VARCHAR(255) NOT NULL,
+    `surname` VARCHAR(80) NOT NULL,
+    `name` VARCHAR(80) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `company` VARCHAR(80) NOT NULL,
     `is_admin` INT NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
-    `avatar` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
+    `avatar` VARCHAR(200) NOT NULL,
     `grade_id` INT NOT NULL
 );
 CREATE TABLE `taux`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `titre_taux` VARCHAR(255) NOT NULL,
+    `titre_taux` VARCHAR(100) NOT NULL,
     `value_taux` DOUBLE(8, 2) NOT NULL
 );
 CREATE TABLE `projet`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `user_id` INT NOT NULL,
-    `nom_projet` VARCHAR(255) NOT NULL,
-    `description_projet` VARCHAR(255) NOT NULL,
-    `investissement` VARCHAR(255) NOT NULL,
+    `nom_projet` VARCHAR(100) NOT NULL,
+    `description_projet` VARCHAR(200) NOT NULL,
+    `investissement` VARCHAR(50) NOT NULL,
     `duree` INT NOT NULL
 );
 CREATE TABLE `annee`(
     `projet_id` INT NOT NULL,
-    `name_annee` VARCHAR(100) NOT NULL,
+    `name_annee` VARCHAR(50) NOT NULL,
     `chiffre_affaire` VARCHAR(50) NOT NULL,
     `achats_annuels` VARCHAR(50) NOT NULL,
     `charges_structures` VARCHAR(50) NOT NULL,
