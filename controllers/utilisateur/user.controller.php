@@ -189,7 +189,7 @@ class UtilisateurController extends MainController{
                 $_SESSION['inscription'] = 1;
                 render("inscription","inscription");
             }else{
-                Toolbox::ajouterMessageAlerte("Une erreur est survenue", Toolbox::COULEUR_ORANGE);
+                Toolbox::ajouterMessageAlerte("Erreur : BDD", Toolbox::COULEUR_ORANGE);
                 render('inscription',"inscription");
             }
         }else{

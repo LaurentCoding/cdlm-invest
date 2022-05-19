@@ -44,7 +44,7 @@ class UserManager extends Bdd{
 
     public function inscriptionUser(array $array)
     {
-        $req = "INSERT INTO user(`surname`, `name`, `email`,`company`,`is_admin`, `password`,  `avatar`, `profil_id`) VALUES (:surname , :name, :email, :company, 0, :password, :avatar, :profil_id)";
+        $req = "INSERT INTO user(`surname`, `name`, `email`,`company`,`is_admin`, `password`,  `avatar`, `grade_id`) VALUES (:surname , :name, :email, :company, 0, :password, :avatar, :profil_id)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":surname",$array['prenom'],PDO::PARAM_STR);
         $stmt->bindValue(":name",$array['nom'],PDO::PARAM_STR);
