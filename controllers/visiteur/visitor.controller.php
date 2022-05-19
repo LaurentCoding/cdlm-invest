@@ -1,3 +1,4 @@
+
 <?php
 // mainController -> permet de générer les pages
 require "./controllers/mainController.php";
@@ -12,6 +13,4 @@ class VisiteurController extends MainController{
         ];
         $this->genererPage($data_page);
     }
-}
-
 
