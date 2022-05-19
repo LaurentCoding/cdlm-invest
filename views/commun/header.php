@@ -6,9 +6,9 @@
         <label for="toggle"><span id="burger" class="close"></span></label>
         <input type="checkbox" id="toggle">
         <div class="menu d_flex justify_content_center align_items_center">
-            <a class="m_5 br_5 p_5" href="<?= URL ?>sommesNous">Qui sommes-nous?</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>expertise">Nos expertises</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>solution">Nos solutions</a>
+            <a class="m_5 br_5 p_5" href="<?= URL ?>qui-sommes-nous">Qui sommes-nous?</a>
+            <a class="m_5 br_5 p_5" href="<?= URL ?>nos-expertises">Nos expertises</a>
+            <a class="m_5 br_5 p_5" href="<?= URL ?>nos-solutions">Nos solutions</a>
             <a class="m_5 br_5 p_5" href="<?= URL ?>blog">Blog</a>
             <a class="m_5 br_5 p_5" href="<?= URL ?>contact">Contact</a>
 

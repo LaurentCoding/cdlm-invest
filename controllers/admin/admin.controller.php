@@ -1,6 +1,4 @@
 <?php
-// mainController -> permet de générer les pages
-require_once "./controllers/mainController.php";
 // -----------------------------------------------------
 require_once "./models/projetManager.php";
 require_once "./models/userManager.php";

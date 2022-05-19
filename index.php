@@ -5,6 +5,8 @@ session_start();
 // création du constante URL (racine du projet)
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
 
+// mainController -> permet de générer les pages
+require "./controllers/mainController.php";
 // ----------------
 require "./controllers/function.php";
 // ----------------
@@ -14,8 +16,8 @@ $userController = new UtilisateurController;
 require_once "./controllers/admin/admin.controller.php";
 $adminController = new AdministrateurController;
 // ----------------
-// require_once "./controllers/visiteur/visitor.controller.php";
-// $visiteurController = new VisiteurController;
+require_once "./controllers/visiteur/visitor.controller.php";
+$visiteurController = new VisiteurController;
 
 
 // GESTION DES ROUTES ---------------------------------------------------------------------------------------------------------
@@ -23,7 +25,7 @@ try {
 	//vérification si on est sur la racine de l'URL
 	if (empty($_GET['page'])) {
 		$_SESSION['page'] = "accueil";
-		$userController->afficherAccueil();
+		$visiteurController->afficherAccueil();
 	} else {
 		// génerer un tableau des informations contenu dans l'url
 		$url = explode("/", filter_var($_REQUEST['page']), FILTER_SANITIZE_URL);
@@ -32,7 +34,7 @@ try {
 		switch($url[0]){
 			case "accueil":
 				$_SESSION['page'] = "accueil";
-				$userController->afficherAccueil();
+				$visiteurController->afficherAccueil();
 			break;
 			// gestion connexion
 			case "connexion":
@@ -50,7 +52,7 @@ try {
 			// gestion inscription
 			case "inscription":
 				$_SESSION['page'] = "inscription";
-				$userController->afficherInscription();
+				$visiteurController->afficherInscription();
 			break;
 			case "goInscription":
 				$array = [
@@ -158,11 +160,21 @@ try {
 				}
 			break;
 
-
-
-
-
-
+			case "qui-sommes-nous":
+				$visiteurController->AfficherQuiSommesNous();
+			break;
+			case "nos-expertises":
+				$visiteurController->AfficherNosExpertises();
+			break;
+			case "nos-solutions":
+				$visiteurController->afficherNosSolutions();
+			break;
+			case "blog":
+				$visiteurController->afficherBlog();
+			break;
+			case "contact":
+				$visiteurController->afficherContact();
+			break;
 			default:
 			$_SESSION['page'] = "";
 			throw new Exception("page introuvable");

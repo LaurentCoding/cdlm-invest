@@ -1,46 +1,67 @@
 
 <?php
-// mainController -> permet de générer les pages
-require "./controllers/mainController.php";
 
-class VisitorController extends MainController
+class VisiteurController extends MainController
 {
-    public function quiSommesNous(){
+
+    // Affichage : page accueil
+    public function afficherAccueil()
+    {
+        $data_page = [
+            "page_titre"    => "Journée spécial baguette",
+            "view"          => "./views/visiteur/accueil.view.php",
+            "template"      => "./views/commun/template.php"
+        ];
+        $this->genererPage($data_page);
+    }
+    // affichage page d'inscription
+    public function afficherInscription()
+    {
+        $data_page = [
+            "page_titre"        => "Page d'inscription",
+            "view"              => "./views/visiteur/inscription.view.php",
+            "template"          => "./views/commun/template.php",
+            "page_javascript"   => ["public/js/inscription.js"]
+        ];
+        $this->genererPage($data_page);
+    }
+
+    public function AfficherQuiSommesNous(){
         $data_page = [
             "page_titre"    => "Page qui sommes-nous?",
-            "view"          => "./views/utilisateur/sommesNous.view.php",
+            "view"          => "./views/visiteur/sommesNous.view.php",
             "template"      => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);
     }
-    public function nosExpertises(){
+    public function AfficherNosExpertises(){
         $data_page = [
             "page_titre"    => "Nos Expertises",
-            "view"          => "./views/utilisateur/expertise.view.php",
+            "view"          => "./views/visiteur/expertise.view.php",
             "template"      => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);
     }
-    public function nosSolution(){
+    public function afficherNosSolutions(){
         $data_page = [
             "page_titre"    => "Nos solutions",
-            "view"          => "./views/utilisateur/solution.view.php",
+            "view"          => "./views/visiteur/solution.view.php",
             "template"      => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);
     }
-    public function blog(){
+    public function afficherBlog(){
         $data_page = [
             "page_titre"    => "Super blog",
-            "view"          => "./views/utilisateur/blog.view.php",
+            "view"          => "./views/visiteur/blog.view.php",
             "template"      => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);
     }
-    public function contact(){
+    public function afficherContact(){
         $data_page = [
             "page_titre"    => "Contact",
-            "view"          => "./views/utilisateur/contact.view.php",
+            "view"          => "./views/visiteur/contact.view.php",
             "template"      => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);

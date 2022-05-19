@@ -1,6 +1,5 @@
 <?php
-// mainController -> permet de générer les pages
-require "./controllers/mainController.php";
+
 // appelle du usermanager
 require "./models/userManager.php";
 // appelle profilManager
@@ -21,16 +20,7 @@ class UtilisateurController extends MainController{
         $this->anneManager = new AnneeManager();
     }
 
-    // Affichage : page accueil
-    public function afficherAccueil()
-    {
-        $data_page = [
-            "page_titre"    => "Journée spécial baguette",
-            "view"          => "./views/utilisateur/accueil.view.php",
-            "template"      => "./views/commun/template.php"
-        ];
-        $this->genererPage($data_page);
-    }
+
 
     // affichage : page de profil
     public function afficherProfil()
@@ -187,17 +177,6 @@ class UtilisateurController extends MainController{
             Toolbox::ajouterMessageAlerte("Combinaison EMAIL/MDP fausse",Toolbox::COULEUR_ORANGE);
             render("connexion","connexion");
         }
-    }
-    // affichage page d'inscription
-    public function afficherInscription()
-    {
-        $data_page = [
-            "page_titre"        => "Page d'inscription",
-            "view"              => "./views/utilisateur/inscription.view.php",
-            "template"          => "./views/commun/template.php",
-            "page_javascript"   => ["public/js/inscription.js"]
-        ];
-        $this->genererPage($data_page);
     }
     public function goInscription(array $array)
     {
