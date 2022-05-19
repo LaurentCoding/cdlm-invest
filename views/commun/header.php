@@ -2,71 +2,18 @@
     <div>
         <a class="home_logo" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo" class="header_logo"></a>
     </div>
-
-    <!-- <div class="home">
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>accueil">Accueil</a>
-                    <ul>
-                        <li><a href="<?= URL ?>sommeNous">Qui sommes-nous?</a></li>
-                        <li><a href="<?= URL ?>">Notre histoire</a></li>
-                        <li><a href="<?= URL ?>">Nos valeurs</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>actualites">Actualités</a>
-                    <ul>
-                        <li><a href="">Juridiques</a></li>
-                        <li><a href="">Economiques</a></li>
-                        <li><a href="">Social</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10">
-                    <a href="<?= URL ?>gestion">Gestion</a>
-                    <ul>
-                        <li><a href="<?= URL ?>">Gestion</a></li>
-                        <li><a href="<?= URL ?>">Comptabilité</a></li>
-                        <li><a href="<?= URL ?>">Rémunérer</a></li>
-                        <li><a href="<?= URL ?>">Recruter</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>etudiant">Etudiants</a>
-                    <ul>
-                        <li><a href="<?= URL ?>">Entreprenariat Féminin</a></li>
-                        <li><a href="<?= URL ?>">Entreprenariat Masculin</a></li>
-                        <li><a href="<?= URL ?>">Développement</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>coaching">Coaching</a>
-                    <ul>
-                        <li><a href="<?= URL ?>">Coaching-1</a></li>
-                        <li><a href="<?= URL ?>">Coaching-2</a></li>
-                        <li><a href="<?= URL ?>">Coaching-3</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <nav class="Menu">
-            <ul class="menu_accordeon">
-                <li class="m_10"><a href="<?= URL ?>contact">Contact</a>
-                </li>
-            </ul>
-        </nav> -->
+   
+    <nav>
+        <label for="toggle"><span id="burger" class="close"></span></label>
+        <input type="checkbox" id="toggle">
+        <div class="menu d_flex">
+        <a class="ml_10 mr_10 br_5" href="<?= URL ?>sommesNous">Qui sommes-nous?</a>
+        <a class="ml_10 mr_10 br_5" href="<?= URL ?>expertise">Nos expertises</a>
+        <a class="ml_10 mr_10 br_5" href="<?= URL ?>solution">Nos solutions</a>
+        <a class="ml_10 mr_10 br_5" href="<?= URL ?>blog">Blog</a>
+        <a class="ml_10 mr_10 br_5" href="<?= URL ?>contact">Contact</a>
+           
+         
 
         <div id="profil">
         <?php if(!is_connected()) { ?>
@@ -90,8 +37,8 @@
                 </a>
          <?php } ?>
         </div>
-    </div>
-    </div>
+        </div>
+        </nav>
 </header>
 
 

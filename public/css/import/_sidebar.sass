@@ -1,98 +1,82 @@
 
-
 header
-  
-  // top: 0
-  // left: 0
-  width: 100VW
-  height: 6rem
-  background-color: $color_grisc
-  padding: 10px
-  box-shadow: 6px 6px 8px $color_grisf
-  z-index: 10
+  background-color: $color-grisc
+  box-shadow: 0px 6px 8px $color_grisc
 
-.home
-  display: flex
-  align-items: center
+  nav
+    a
+      background: $color_grisf
+      color: $color_white
+      padding: 5px 10px
+  nav    
+    a:hover 
+      color: $color_blue
   
-.menu
+label
+    display: none
   
-  .accordeon
-    padding: 0
-    margin: 0
-    text-align: center
-    width: 180px
-    /* On applique les mêmes propriétés que le premier UL */
-    ul
-      display: flex
-      flex-direction: column
+
+#toggle
+    display: none
+
+#burger
+    position: relative
+    display: inline-block
+    border-top: 3px solid $color_white
+    border-bottom: 3px solid $color_white
+    width: 50px
+    height: 40px
+
+#burger:not()
+  border: none
+  border-bottom: none
+  transform: rotate(90deg)
+  height: 45px
+
+#burger::before, #burger::after
+  position: absolute
+  content: ''
+  display: block
+  width: 90%
+  height: 3px
+  background-color: $color_white
+  left: 5%
+  top: calc(50% - 1px)
+  transform: all .3s
+
+#burger:not()::before
+  transform: rotate(45deg)
+
+#burger:not()::after
+  transform: rotate(-45deg)
+
+
+
+@media screen and (min-width: $medium) and (max-width: $large) 
+  .menu
+    display: none
+    flex-direction: column  
+    
+  .menu 
+    position: absolute
+    top: 150px
+    left: 0
+    width: 100%
+    background: $color_grisf
+    
+    a
+      width: 100%
       text-align: center
-    li
-      background-color: $color_grisf
+      padding: 10 0
       
-      box-shadow: 3px 3px 3px $color_grisf
-      a
-        color: $color_white
-        
-      li
-        max-height: 0
-        overflow: hidden
-        transition: all .5s
-        border-radius: 0
-        background-color: $color_grisf
-        border: none
-        margin: 0
-        
+  label
+      width: 30px
+      display: flex
+      align-items: center
+      font-size: 40px
+      color: white
+      cursor: pointer
+  #toggle:checked + .menu
+      display: flex
+      transition: 0.5s ease
 
-.menu
-  &_accordeon
-    ul
-      li
-        a
-          font-size: 1em
-
-.menu
-  .accordeon
-    li:hover 
-      background-color: $color_grisc
-
-.menu
-  .accordeon
-    li:hover 
-      li 
-        a
-          font-size: 1em
-
-.menu
-  .accordeon
-    li
-      li:hover
-        background-color: $color_grisc
-
-.menu
-  .accordeon
-    ul
-      li:last-child
-        border-radius: 0 0 6px 6px
-        border: none
-
-.menu
-  .accordeon
-    li:hover 
-      li
-        max-height: 15em
-
-
-
-@media screen and (max-width: $small) 
-    .header 
-      height: 80px
-    .logo
-        width: 100px
-
-
-
-  
-
-
-  
