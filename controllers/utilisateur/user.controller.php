@@ -25,7 +25,7 @@ class UtilisateurController extends MainController{
     public function afficherAccueil()
     {
         $data_page = [
-            "page_titre"    => "Venez Calculer votre futur investissement sans vous tromper",
+            "page_titre"    => "Journée spécial baguette",
             "view"          => "./views/utilisateur/accueil.view.php",
             "template"      => "./views/commun/template.php"
         ];

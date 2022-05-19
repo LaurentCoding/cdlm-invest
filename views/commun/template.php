@@ -6,7 +6,7 @@
 
 <!-- mise en place du body -->
 
-<body class="d_flex flex_fill flex_column">
+<body class="container d_flex flex_fill flex_column">
     <?php require "./views/commun/header.php" ?>
     
     <div class="d_flex flex_fill justify_content_start container">
