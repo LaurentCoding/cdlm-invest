@@ -1,8 +1,17 @@
 
 <?php
 
+// appelle du usermanager
+// require "./models/userManager.php";
+
 class VisiteurController extends MainController
 {
+    private $userManager;
+
+    public function __construct()
+    {
+        $this->userManager = new UserManager;
+    }
 
     // Affichage : page accueil
     public function afficherAccueil()
@@ -18,6 +27,7 @@ class VisiteurController extends MainController
     public function afficherInscription()
     {
         $data_page = [
+            "profils"            => $this->userManager->getGrade(),
             "page_titre"        => "Page d'inscription",
             "view"              => "./views/visiteur/inscription.view.php",
             "template"          => "./views/commun/template.php",

@@ -29,6 +29,7 @@ class UserManager extends Bdd{
         return $resultat;
     }
 
+
     public function modificationItemBdd(string $name_item,string $item,string $email)
     {
         $req = "UPDATE user SET " . $name_item . " = :item WHERE email = :email";
@@ -43,7 +44,7 @@ class UserManager extends Bdd{
 
     public function inscriptionUser(array $array)
     {
-        $req = "INSERT INTO user(`surname`, `name`, `email`,`company`,`is_admin`, `password`,  `avatar`) VALUES (:surname , :name, :email, :company, 0, :password, :avatar)";
+        $req = "INSERT INTO user(`surname`, `name`, `email`,`company`,`is_admin`, `password`,  `avatar`, `profil_id`) VALUES (:surname , :name, :email, :company, 0, :password, :avatar, :profil_id)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":surname",$array['prenom'],PDO::PARAM_STR);
         $stmt->bindValue(":name",$array['nom'],PDO::PARAM_STR);
@@ -51,6 +52,7 @@ class UserManager extends Bdd{
         $stmt->bindValue(':company',"none",PDO::PARAM_STR);
         $stmt->bindValue(':password',$array['password'], PDO::PARAM_STR);
         $stmt->bindValue(':avatar', "none",PDO::PARAM_STR);
+        $stmt->bindValue(":profil_id", $array['profil'],PDO::PARAM_INT);
         $stmt->execute();
         $estAjouter = $stmt->rowCount() > 0 ;
         $stmt->closeCursor();
@@ -63,6 +65,24 @@ class UserManager extends Bdd{
         $nbrUser = $stmt->rowCount();
         $stmt->closeCursor();
         return $nbrUser;
+    }
+    public function getGradeById(int $id)
+    {
+        $req = "SELECT * FROM grade WHERE id = :id";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(':id',$id,PDO::PARAM_INT);
+        $stmt->execute();
+        $profil = $stmt->fetchAll();
+        $stmt->closeCursor();
+        return $profil;
+    }
+    public function getGrade(){
+        $req = "SELECT * FROM grade";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->execute();
+        $dataProfil = $stmt->fetchAll();
+        $stmt->closeCursor();
+        return $dataProfil;
     }
 
 }

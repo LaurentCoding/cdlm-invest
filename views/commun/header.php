@@ -6,16 +6,16 @@
         <label for="toggle"><span id="burger" class="close"></span></label>
         <input type="checkbox" id="toggle">
         <div class="menu d_flex justify_content_center align_items_center">
-            <a class="m_5 br_5 p_5" href="<?= URL ?>qui-sommes-nous">Qui sommes-nous?</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>nos-expertises">Nos expertises</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>nos-solutions">Nos solutions</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>blog">Blog</a>
-            <a class="m_5 br_5 p_5" href="<?= URL ?>contact">Contact</a>
+            <a class="m_5 br_5 p_10" href="<?= URL ?>qui-sommes-nous">Qui sommes-nous ?</a>
+            <a class="m_5 br_5 p_10" href="<?= URL ?>nos-expertises">Nos expertises</a>
+            <a class="m_5 br_5 p_10" href="<?= URL ?>nos-solutions">Nos solutions</a>
+            <a class="m_5 br_5 p_10" href="<?= URL ?>blog">Blog</a>
+            <a class="m_5 br_5 p_10" href="<?= URL ?>contact">Contact</a>
 
 
             <div id="profil">
                 <?php if (is_connected() && $_SESSION['avatar'] != "none") { ?>
-                    <div id="profil_connect" class="d_flex justify_content_center align_items_center">
+                    <div id="profil_connect" class="d_flex justify_content_center align_items_center ml_5">
                         <img src="<?= URL . $_SESSION['avatar'] ?>" alt="<?= $_SESSION['avatar'] ?>"><span class="ml_5"><?= $_SESSION['surname'] ?></span>
                     </div>
 
@@ -40,6 +40,9 @@
                         <a href="<?= URL ?>connexion" class="btn_profil m_5"><i class="fa-solid fa-power-off mr_5"></i>Se connecter</a>
                         <a href="<?= URL ?>inscription" class="btn_profil m_5">S'inscrire</a>
                     <?php } else { ?>
+                        <?php if($_SESSION['admin'] == 1) : ?>
+                            <a href="<?= URL ?>admin" class="btn_profil m_5">Admin</a>
+                        <?php endif ?>
                         <a href="<?= URL ?>user/profil" class="btn_profil m_5">Profils</a>
                         <a href="<?= URL ?>user/projet" class="btn_profil m_5">Projets</a>
                         <a href="<?= URL ?>logout" class="btn_profil m_5 d_flex justify_content_center align_items_center">

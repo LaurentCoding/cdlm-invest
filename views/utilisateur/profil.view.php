@@ -57,5 +57,17 @@
                 <td><button type="submit" class="btn btn_success">Valider</button></td>
             </form>
         </tr>
+        <tr>
+            <td>
+                <form action="<?= URL ?>user/profil/grade_id" method="POST">
+                    <select name="grade" id="grade">
+                        <?php foreach ($allGrade as $grade) : ?>
+                            <option value="<?= $grade['id'] ?>" <?php if($grade['id'] == $gradeSelect[0]['id']){ ?> selected <?php } ?>><?= $grade['name_profil'] ?></option>
+                        <?php endforeach ?>
+                    </select>
+                    <button type="submit">Modifier</button>
+                </form>
+            </td>
+        </tr>
     </table>
 </div>

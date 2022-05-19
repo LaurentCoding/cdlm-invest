@@ -60,6 +60,7 @@ try {
 				"prenom" 	=> data_secure($_POST['prenom']),
 				"email" 	=> data_secure($_POST['email']),
 				"password" 	=> hachage_password(data_secure($_POST['password1'])),
+				"profil"	=> data_secure($_POST['profil'])
 				];
 				$userController->goInscription($array);
 			break;
@@ -99,6 +100,9 @@ try {
 									Toolbox::ajouterMessageAlerte("Trop volumineux 1mo maximum",Toolbox::COULEUR_ORANGE);
 									header("location: ".URL."user/profil");
 								}
+							}elseif($url[2] == "grade_id"){
+								$userController->updateProfil($_SESSION['email'],$url[2], data_secure($_POST['grade']));
+
 							}else{
 								throw new Exception("Erreur de requête");
 							}

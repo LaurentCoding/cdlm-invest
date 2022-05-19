@@ -23,6 +23,9 @@
             unset($_SESSION['alert']);
         }
         ?>
+        <pre>
+            <?= var_dump($_SESSION); ?>
+        </pre>
             <!-- information reçu du controller -->
             <?= $page_content ?>
         </div>

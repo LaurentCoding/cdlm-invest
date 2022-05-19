@@ -43,6 +43,18 @@
         <tr>
             <td colspan="2" class="text_center"><span id="error_password"></span></td>
         </tr>
+        <tr>
+            <td class="form_name text_start mt_10">Votre profil : </td>
+        </tr>
+        <tr>
+            <td>
+                <select name="profil" id="profil">
+                    <?php foreach ($profils as $profil) : ?>
+                        <option value="<?= $profil['id'] ?>"><?= $profil['name_profil'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </td>
+        </tr>
     </table>
     <div>
         <button class="btn btn_valid mt_20" type="submit">S'inscrire</button>

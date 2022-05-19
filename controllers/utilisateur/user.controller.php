@@ -25,9 +25,12 @@ class UtilisateurController extends MainController{
     // affichage : page de profil
     public function afficherProfil()
     {
+        $profil = $this->userManager->getInformationUser($_SESSION['email']);
         $data_page = [
             "page_titre"        => "Page de profil",
-            "profil"            => $this->userManager->getInformationUser($_SESSION['email']),
+            "profil"            => $profil,
+            "gradeSelect"       => $this->userManager->getGradeById($profil['grade_id']),
+            "allGrade"          => $this->userManager->getGrade(),
             "view"              => "./views/utilisateur/profil.view.php",
             "template"          => "./views/commun/template.php",
             "page_javascript"   => ["public/js/profils.js"]
@@ -100,11 +103,11 @@ class UtilisateurController extends MainController{
                     Toolbox::ajouterMessageAlerte("Projet ajouté", Toolbox::COULEUR_VERTE);
                     render("user/projet", "projet");
                 }else{
-                    Toolbox::ajouterMessageAlerte("une erreur est survenu.", Toolbox::COULEUR_ORANGE);
+                    Toolbox::ajouterMessageAlerte("Erreur : lors de la création de l'année.", Toolbox::COULEUR_ORANGE);
                     render("user/projet/new", "projet");
                 }
             }else{
-                Toolbox::ajouterMessageAlerte("une erreur est survenu.",Toolbox::COULEUR_ORANGE);
+                Toolbox::ajouterMessageAlerte("Erreur : lors de la création du profils.",Toolbox::COULEUR_ORANGE);
                 render("user/projet/new","projet");
             }
         }else{
@@ -114,7 +117,7 @@ class UtilisateurController extends MainController{
     }
     public function supprimerProjet(int $id)
     {
-        if($this->projetManager->supprimerProjet($id)){
+        if($this->projetManager->supprimerProjet($id) && $this->anneManager->deleteAnneeByIdProjet($id)){
             Toolbox::ajouterMessageAlerte("Projet suprimé",Toolbox::COULEUR_ORANGE);
             render('user/projet', "projet");
         }else{
@@ -140,7 +143,8 @@ class UtilisateurController extends MainController{
     {
         $projet = $this->projetManager->getProjetByIdProjet($id);
         $data_page = [
-            "projet"           => $projet,
+            "projet"            => $projet,
+            "annees"            => $this->anneManager->getAnneeByIdProjet($id),
             "page_titre"        => $projet->getNom_projet(),
             "view"              => "./views/utilisateur/detailProjet.view.php",
             "template"          => "./views/commun/template.php"

@@ -41,7 +41,6 @@ class ProjetManager extends Bdd{
             $dataP[] = $data;
         }
         return $data;
-
     }
     public function modificationProjetBdd(int $id, string $name_item, string $item)
     {
