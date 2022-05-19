@@ -2,7 +2,6 @@
 header
   background-color: $color-grisc
   box-shadow: 0px 6px 8px $color_grisc
-
   nav
     a
       background: $color_grisf
@@ -12,6 +11,9 @@ header
     a:hover 
       color: $color_blue
   
+
+#header_logo
+  max-width: 100px
 label
     display: none
   
@@ -52,7 +54,7 @@ label
 
 
 
-@media screen and (min-width: $medium) and (max-width: $large) 
+@media screen and (max-width: $medium) 
   .menu
     display: none
     flex-direction: column  

@@ -151,12 +151,24 @@ p {
   margin-right: 10px;
 }
 
+.mr_20 {
+  margin-right: 20px;
+}
+
+.mr_30 {
+  margin-right: 30px;
+}
+
 .ml_5 {
   margin-left: 5px;
 }
 
 .ml_10 {
   margin-left: 10px;
+}
+
+.ml_40 {
+  margin-left: 40px;
 }
 
 .mt_10 {
@@ -413,6 +425,10 @@ header nav a:hover {
   color: #a6d9f7;
 }
 
+#header_logo {
+  max-width: 100px;
+}
+
 label {
   display: none;
 }
@@ -461,7 +477,7 @@ label {
           transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .menu {
     display: none;
     -webkit-box-orient: vertical;
@@ -701,9 +717,5 @@ input {
 
 #img_404 {
   max-width: 300px;
-}
-
-#header_logo {
-  max-width: 150px;
 }
 /*# sourceMappingURL=default.css.map */

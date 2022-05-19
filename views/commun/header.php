@@ -1,8 +1,8 @@
-<header class="d_flex justify_content_around align_items_center mb_10">
+<header class="d_flex justify_content_between align_items_center mb_10 p_10">
     <div>
-        <a class="home_logo" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo" class="header_logo"></a>
+        <a class="ml_40" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo"></a>
     </div>
-    <nav>
+    <nav class="mr_30">
         <label for="toggle"><span id="burger" class="close"></span></label>
         <input type="checkbox" id="toggle">
         <div class="menu d_flex justify_content_center align_items_center">
