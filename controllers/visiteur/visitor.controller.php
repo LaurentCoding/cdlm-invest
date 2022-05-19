@@ -3,8 +3,8 @@
 // mainController -> permet de générer les pages
 require "./controllers/mainController.php";
 
-class VisiteurController extends MainController{
-
+class VisitorController extends MainController
+{
     public function quiSommesNous(){
         $data_page = [
             "page_titre"    => "Page qui sommes-nous?",

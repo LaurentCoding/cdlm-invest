@@ -6,15 +6,14 @@
 
 <!-- mise en place du body -->
 
-<body class="container d_flex flex_fill flex_column">
+<body class="d_flex flex_fill flex_column">
     <?php require "./views/commun/header.php" ?>
     
     <div class="d_flex flex_fill justify_content_start container">
         <!-- partie contenu de la page -->
         <div class="d_flex flex_column flex_fill align_items_center">
-        <?php if(isset($page_titre)){ echo "<h1 class='my_20'>".$page_titre."</h1>"; } ?>
+        <?php if(isset($page_titre)){ echo "<h1 class='m_10'>".$page_titre."</h1>"; } ?>
         <?php
-        var_dump($_SESSION);
         if (!empty($_SESSION['alert'])) {
             foreach ($_SESSION['alert'] as $alert) {
                 echo "<div class='alert' " . $alert['type'] . " m_10' role='alert'>

@@ -178,6 +178,7 @@ class UtilisateurController extends MainController{
             $_SESSION['messageConnect'] = 1;
             $_SESSION['email']          = $utilisateurData['email'];
             $_SESSION['name']           = $utilisateurData['name'];
+            $_SESSION['surname']        = $utilisateurData['surname'];
             $_SESSION['admin']          = $utilisateurData['is_admin'];
             $_SESSION['avatar']         = $utilisateurData['avatar'];
             $_SESSION['id']             = $utilisateurData['id'];
