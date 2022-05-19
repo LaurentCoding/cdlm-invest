@@ -1,4 +1,4 @@
-<header class="d_flex justify_content_around align_items_center mb_20">
+<header class="d_flex justify_content_around align_items_center mb_10">
     <div>
         <a class="home_logo" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo" class="header_logo"></a>
     </div>
