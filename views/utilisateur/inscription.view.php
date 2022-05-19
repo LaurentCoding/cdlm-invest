@@ -1,6 +1,4 @@
 <!-- affichage formulaire -->
-
-<h1 class="inscription_titre">Créer un compte</h1>
 <form class="inscription_form mt_20" method="POST" action="goInscription" class="d_flex align_items_center justify_content_center flex_column">
     <table>
         <tr>

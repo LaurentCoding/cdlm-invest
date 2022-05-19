@@ -24,13 +24,8 @@ class UtilisateurController extends MainController{
     // Affichage : page accueil
     public function afficherAccueil()
     {
-        $nbrProjet = "";
-        if(is_connected()){
-            $nbrProjet = $this->projetManager->nbrProjetById($_SESSION['id']);
-        }
         $data_page = [
-            "nbrProjet"     => $nbrProjet,
-            "page_titre"    => "Page d'accueil",
+            "page_titre"    => "Venez Calculer votre futur investissement sans vous tromper",
             "view"          => "./views/utilisateur/accueil.view.php",
             "template"      => "./views/commun/template.php"
         ];

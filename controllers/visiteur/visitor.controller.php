@@ -13,4 +13,4 @@ class VisiteurController extends MainController{
         ];
         $this->genererPage($data_page);
     }
-}
+
