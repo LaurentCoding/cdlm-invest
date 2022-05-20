@@ -17,42 +17,42 @@ header
 label
     display: none
   
-
-#toggle
-    display: none
-
-#burger
-    position: relative
-    display: inline-block
-    border-top: 3px solid $color_white
-    border-bottom: 3px solid $color_white
-    width: 50px
-    height: 40px
-
-#burger:not()
-  border: none
-  border-bottom: none
-  transform: rotate(90deg)
-  height: 45px
-
-#burger::before, #burger::after
-  position: absolute
-  content: ''
-  display: block
-  width: 90%
-  height: 3px
-  background-color: $color_white
-  left: 5%
-  top: calc(50% - 1px)
-  transform: all .3s
-
-#burger:not()::before
-  transform: rotate(45deg)
-
-#burger:not()::after
-  transform: rotate(-45deg)
+input[type="checkbox"]
+  -webkit-appearance: none
+  visibility: hidden
+  display: none
 
 
+  #toggle
+    display: none 
+.bar 
+  position: relative
+  cursor: pointer
+  display: flex
+  justify-content: center
+  &_middle
+    height: 6px
+    width: 60px
+    background-color: $color_white
+    border-radius: 50px
+    position: absolute
+    transition: 0.3s ease
+  &_top
+    bottom: 14px
+    height: 6px
+    width: 60px
+    background-color: $color_white
+    border-radius: 50px
+    position: absolute
+    transition: 0.3s ease
+  &_bottom
+    top: 20px
+    height: 6px
+    width: 60px
+    background-color: $color_white
+    border-radius: 50px
+    position: absolute
+    transition: 0.3s ease
 
 @media screen and (max-width: $large) 
   .menu
@@ -61,7 +61,7 @@ label
     
   .menu 
     position: absolute
-    top: 150px
+    top: 80px
     left: 0
     width: 100%
     background: $color_grisf
@@ -81,4 +81,13 @@ label
   #toggle:checked + .menu
       display: flex
       transition: 0.5s ease
+  
+
+
+   
+	
+
+
+
+
 

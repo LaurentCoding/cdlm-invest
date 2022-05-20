@@ -33,7 +33,7 @@
 
     <?php require "./views/commun/footer.php" ?>
 
-
+        
 </body>
 
 </html>
