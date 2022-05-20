@@ -17,7 +17,8 @@ body {
   min-height: 100vh;
   color: #636466;
   background: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1200px) {
@@ -44,11 +45,6 @@ a {
 h1 {
   font-family: 'Lemon', cursive;
   color: #4a323c;
-}
-
-p {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
 }
 
 .container_fluid {
@@ -433,48 +429,57 @@ label {
   display: none;
 }
 
-#toggle {
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
   display: none;
 }
 
-#burger {
+input[type="checkbox"] #toggle {
+  display: none;
+}
+
+.bar {
   position: relative;
-  display: inline-block;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-  width: 50px;
-  height: 40px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#burger:not() {
-  border: none;
-  border-bottom: none;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  height: 45px;
-}
-
-#burger::before, #burger::after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 90%;
-  height: 3px;
+.bar_middle {
+  height: 6px;
+  width: 60px;
   background-color: white;
-  left: 5%;
-  top: calc(50% - 1px);
-  -webkit-transform: all .3s;
-          transform: all .3s;
+  border-radius: 50px;
+  position: absolute;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-#burger:not()::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.bar_top {
+  bottom: 14px;
+  height: 6px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-#burger:not()::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.bar_bottom {
+  top: 20px;
+  height: 6px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 992px) {
@@ -487,7 +492,7 @@ label {
   }
   .menu {
     position: absolute;
-    top: 150px;
+    top: 80px;
     left: 0;
     width: 100%;
     background: #80858e;
@@ -558,6 +563,29 @@ label {
   }
   .connexion_titre .btn {
     padding: 0 20px;
+  }
+}
+
+.card {
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 1200px) {
+  .card_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card_projet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 80%;
+    margin: 20;
+    margin-left: 10%;
   }
 }
 
