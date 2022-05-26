@@ -7,4 +7,3 @@
     <p class="card_investissement">Investissement : <?= $projet->getInvestissement() ?> Euros</p>
     <p class="card_duree">Durée du projet : <?= $projet->getDuree() ?> ans</p>
 </div>
-
