@@ -147,7 +147,12 @@ try {
 										$userController->updateProjet($url[4], $url[3], data_secure($_POST['descriptionProjet']));
 									}
 								}elseif($url[2] == "updateData" && isset($url[3]) && isset($url[4])){
-										$userController->updateDataProjet($_POST,$url[3], $url[4]);
+									if($url[3][0] == "N"){
+										$annee = str_replace(" ","+",$url[3]);
+										$userController->updateDataProjet($_POST, $annee, $url[4]);
+									}else{
+										$userController->updateDataProjet($_POST, $url[3], $url[4]);
+									}
 								}else{
 									throw new Exception("Page introuvable");
 								}
