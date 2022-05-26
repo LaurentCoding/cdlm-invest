@@ -22,8 +22,9 @@ class AnneeManager extends Bdd{
     }
 
     public function getAnneeByIdProjet(int $id_projet){
-        $req = "SELECT * FROM annee";
+        $req = "SELECT * FROM annee WHERE projet_id = :id";
         $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":id",$id_projet,PDO::PARAM_STR);
         $stmt->execute();
         $dataAnnée = $stmt->fetchAll();
         $stmt->closeCursor();
