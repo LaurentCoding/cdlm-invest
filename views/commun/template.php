@@ -16,7 +16,7 @@
         <?php
         if (!empty($_SESSION['alert'])) {
             foreach ($_SESSION['alert'] as $alert) {
-                echo "<div class='alert' " . $alert['type'] . " m_10' role='alert'>
+                echo "<div class='alert " . $alert['type'] . " m_10' role='alert'>
                     " . $alert['message'] . "
                 </div>";
             }
