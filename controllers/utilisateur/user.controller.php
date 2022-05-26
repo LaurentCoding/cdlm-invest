@@ -29,18 +29,18 @@ class UtilisateurController extends MainController{
         $data_page = [
             "page_titre"        => "Page de profil",
             "profil"            => $profil,
-            "gradeSelect"       => $this->userManager->getGradeById($profil['grade_id']),
+            "gradeSelect"       => $this->userManager->getGradeById($profil->getGrade_id()),
             "allGrade"          => $this->userManager->getGrade(),
             "view"              => "./views/utilisateur/profil.view.php",
-            "template"          => "./views/commun/template.php",
-            "page_javascript"   => ["public/js/profils.js"]
+            "template"          => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);
     }
     public function updateProfil(string $email, string $name_item, string $item)
     {
         $data_user = $this->userManager->getInformationUser($email);
-        if($data_user[$name_item] == $item){
+        $geter = "get".$name_item."()";
+        if($data_user->$geter == $item){
             Toolbox::ajouterMessageAlerte($name_item." est identique",Toolbox::COULEUR_ORANGE);
             render("user/profil","profil");
         }else{
@@ -54,7 +54,7 @@ class UtilisateurController extends MainController{
         }
     }
     public function updateAvatarProfil(string $email, string $name_item,string $new_adresse, string $adresse_provisoire){
-        $ancien_adresse = $this->userManager->getInformationUser($email)['avatar'];
+        $ancien_adresse = $this->userManager->getInformationUser($email)->getAvatar();
         if($ancien_adresse != $new_adresse){
             if($this->userManager->modificationItemBdd($name_item,$new_adresse,$email)){
                 move_uploaded_file($adresse_provisoire, $new_adresse);

@@ -2,6 +2,7 @@
 
 // appelle de la base de données
 require_once "./models/bdd.php";
+require_once  "./models/class/user.class.php";
 
 // class usermanager
 class UserManager extends Bdd{
@@ -14,19 +15,21 @@ class UserManager extends Bdd{
 
     public function verifCombinaison(array $array)
     {
-        $passwordBdByEmail = $this->getInformationUser($array['email'])['password'];
+        $passwordBdByEmail = $this->getInformationUser($array['email'])->getPassword();
         return $passwordBdByEmail === $array['password'];
     }
 
     public function getInformationUser(string $email)
     {
+        $informationUser = [];
         $req    = "SELECT * FROM user WHERE email = :email";
         $stmt   = $this->getBdd()->prepare($req);
         $stmt->bindValue(':email',$email,PDO::PARAM_STR);
         $stmt->execute();
-        $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
+        $resultat = $stmt->fetchAll();
         $stmt->closeCursor();
-        return $resultat;
+        
+        return new User($resultat[0]);
     }
 
 
