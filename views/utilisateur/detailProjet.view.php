@@ -10,8 +10,8 @@
 </div>
 
 <div id="donnees_entrees">
-    <form action="<?= URL ?>updateDataProjet" method="POST" class="w_100 d_flex flex_row_wrap">
-        <div class=" d_flex flex_row_wrap">
+    <form action="<?= URL ?>updateDataProjet" method="POST" class="w_100 m_10">
+        <div class=" d_flex flex_row_wrap justify_content_center align_items_center text_center">
             <?php foreach ($annees as $annee) : ?>
                 <div class=" w_25">
             <div><?= $annee['name_annee'] ?></div>
