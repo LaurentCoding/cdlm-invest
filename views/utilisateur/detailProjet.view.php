@@ -34,6 +34,7 @@
 
             <?php endforeach ?>
         </table>
+        <button type="submit" class="btn btn_success mt_10 m_auto d_block w_50">Sauvegarder</button>
     </form>
 </div>
 
