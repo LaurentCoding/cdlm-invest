@@ -19,9 +19,6 @@ class UtilisateurController extends MainController{
         $this->projetManager = new ProjetManager();
         $this->anneManager = new AnneeManager();
     }
-
-
-
     // affichage : page de profil
     public function afficherProfil()
     {
@@ -182,12 +179,12 @@ class UtilisateurController extends MainController{
             $utilisateurData = $this->userManager->getInformationUser($array['email']);
             $_SESSION['connect']        = 1;
             $_SESSION['messageConnect'] = 1;
-            $_SESSION['email']          = $utilisateurData['email'];
-            $_SESSION['name']           = $utilisateurData['name'];
-            $_SESSION['surname']        = $utilisateurData['surname'];
-            $_SESSION['admin']          = $utilisateurData['is_admin'];
-            $_SESSION['avatar']         = $utilisateurData['avatar'];
-            $_SESSION['id']             = $utilisateurData['id'];
+            $_SESSION['email']          = $utilisateurData->getEmail();
+            $_SESSION['name']           = $utilisateurData->getName();
+            $_SESSION['surname']        = $utilisateurData->getSurname();
+            $_SESSION['admin']          = $utilisateurData->getIs_admin();
+            $_SESSION['avatar']         = $utilisateurData->getAvatar();
+            $_SESSION['id']             = $utilisateurData->getId();
             render("accueil","accueil");
         }else{
             Toolbox::ajouterMessageAlerte("Combinaison EMAIL/MDP fausse",Toolbox::COULEUR_ORANGE);
