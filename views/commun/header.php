@@ -1,4 +1,4 @@
-<header class="d_flex justify_content_between align_items_center mb_10 p_10">
+<header class="d_flex justify_content_between align_items_center p_10">
     <div>
         <a class="ml_40" href="<?= URL ?>accueil"><img src="<?= URL ?>public/img/cdlm.png" alt="logo" id="header_logo"></a>
     </div>
@@ -11,11 +11,11 @@
         </div></label>
         <input type="checkbox" id="toggle">
         <div class="menu d_flex justify_content_center align_items_center">
-            <a class="m_5 br_5 p_10" href="<?= URL ?>qui-sommes-nous">Qui sommes-nous ?</a>
-            <a class="m_5 br_5 p_10" href="<?= URL ?>nos-expertises">Nos expertises</a>
-            <a class="m_5 br_5 p_10" href="<?= URL ?>nos-solutions">Nos solutions</a>
-            <a class="m_5 br_5 p_10" href="<?= URL ?>blog">Blog</a>
-            <a class="m_5 br_5 p_10" href="<?= URL ?>contact">Contact</a>
+            <a class="decoration m_5 br_5 p_10" href="<?= URL ?>qui-sommes-nous">Qui sommes-nous ?</a>
+            <a class="decoration m_5 br_5 p_10" href="<?= URL ?>nos-expertises">Nos expertises</a>
+            <a class="decoration m_5 br_5 p_10" href="<?= URL ?>nos-solutions">Nos solutions</a>
+            <a class="decoration m_5 br_5 p_10" href="<?= URL ?>blog">Blog</a>
+            <a class="decoration m_5 br_5 p_10" href="<?= URL ?>contact">Contact</a>
 
 
             <div id="profil">

@@ -17,7 +17,7 @@ class VisiteurController extends MainController
     public function afficherAccueil()
     {
         $data_page = [
-            "page_titre"    => "Journée spécial baguette",
+            "page_titre"    => "Quel est votre probléme?",
             "view"          => "./views/visiteur/accueil.view.php",
             "template"      => "./views/commun/template.php"
         ];
