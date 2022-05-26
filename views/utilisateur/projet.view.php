@@ -9,7 +9,7 @@
 <?php if (!empty($projets)) : ?>
     <div class="card_container text_center w_100 d_flex">
         <?php foreach ($projets as $projet) : ?>
-          
+
             <div class="card card_projet w_50  br_10 p_15 m_10 d_flex flex_column  ">
 
                 <!-- affichage nom projet -->
