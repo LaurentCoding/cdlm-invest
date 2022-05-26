@@ -1,0 +1,23 @@
+#accordeon
+    border: 1px solid $color_grisf
+    border-radius: 10px
+    width: 95%
+    text-align: center
+
+    .sub > li
+        height: 0
+        overflow: hidden
+        transition: all .3s ease-in
+        background: $primary
+        
+    label
+        display: block
+        cursor: pointer
+        background: $color_grisc
+        &:hover
+            color: red
+    input[type="radio"],input[type="checkbox"]     
+        display: none
+    
+    input:checked + .sub > li
+        height: 2em

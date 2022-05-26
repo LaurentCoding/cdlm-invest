@@ -132,7 +132,11 @@ try {
 								}elseif($url[2] == "delete"){
 									$userController->supprimerProjet($url[3]);
 								}elseif($url[2] == "afficher"){
-									$userController->afficherDetailProjet($url[3]);
+									if(!isset($url[4])){
+										$userController->afficherDashProjet($url[3]);
+									}else{
+										$userController->afficherDataProjet($url[3]);
+									}
 								}elseif($url[2] == "update"){
 									if($url[3] == "nom_projet")
 									{

@@ -139,14 +139,26 @@ class UtilisateurController extends MainController{
             }
         }
     }
-    public function afficherDetailProjet(int $id)
+    public function afficherDashProjet(int $id)
     {
         $projet = $this->projetManager->getProjetByIdProjet($id);
         $data_page = [
             "projet"            => $projet,
             "annees"            => $this->anneManager->getAnneeByIdProjet($id),
             "page_titre"        => $projet->getNom_projet(),
-            "view"              => "./views/utilisateur/detailProjet.view.php",
+            "view"              => "./views/utilisateur/dashProjet.view.php",
+            "template"          => "./views/commun/template.php"
+        ];
+        $this->genererPage($data_page);
+    }
+    public function afficherDataProjet(int $id)
+    {
+        $projet = $this->projetManager->getProjetByIdProjet($id);
+        $data_page = [
+            "projet"            => $projet,
+            "annees"            => $this->anneManager->getAnneeByIdProjet($id),
+            "page_titre"        => $projet->getNom_projet(),
+            "view"              => "./views/utilisateur/dataProjet.view.php",
             "template"          => "./views/commun/template.php"
         ];
         $this->genererPage($data_page);

@@ -757,6 +757,39 @@ input {
   border-radius: 5px;
 }
 
+#accordeon {
+  border: 1px solid #80858e;
+  border-radius: 10px;
+  width: 95%;
+  text-align: center;
+}
+
+#accordeon .sub > li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  background: #a2d4f5;
+}
+
+#accordeon label {
+  display: block;
+  cursor: pointer;
+  background: rgba(128, 133, 142, 0.5);
+}
+
+#accordeon label:hover {
+  color: red;
+}
+
+#accordeon input[type="radio"], #accordeon input[type="checkbox"] {
+  display: none;
+}
+
+#accordeon input:checked + .sub > li {
+  height: 2em;
+}
+
 #img_404 {
   max-width: 300px;
 }
