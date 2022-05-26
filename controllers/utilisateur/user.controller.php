@@ -136,6 +136,15 @@ class UtilisateurController extends MainController{
             }
         }
     }
+
+    public function updateDataProjet(array $datas, string $annee, int $id_projet)
+    {
+        foreach($datas as $key => $value){
+            $this->anneManager->updateItemAnnee($key,$value, $id_projet, $annee);
+        }
+        render("user/projet/afficher/".$id_projet."/data","dataProjet");
+    }
+
     public function afficherDashProjet(int $id)
     {
         $projet = $this->projetManager->getProjetByIdProjet($id);

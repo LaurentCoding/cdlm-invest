@@ -47,4 +47,17 @@ class AnneeManager extends Bdd{
         return $estSupprimer; 
     }
 
+    public function updateItemAnnee(string $name_item, string $item, string $id_projet, string $name_annee){
+
+        $req = "UPDATE annee SET " . $name_item . " = :item WHERE name_annee = :name_annee and projet_id = :projet_id";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(':item', $item , PDO::PARAM_STR);
+        $stmt->bindValue(':name_annee',$name_annee , PDO::PARAM_STR);
+        $stmt->bindValue(':projet_id', $id_projet, PDO::PARAM_INT);
+        $stmt->execute();
+        $estModifier = ($stmt->rowCount() > 0);
+        $stmt->closeCursor();
+        return $estModifier;
+    }
+
 }

@@ -131,7 +131,7 @@ try {
 									}
 								}elseif($url[2] == "delete"){
 									$userController->supprimerProjet($url[3]);
-								}elseif($url[2] == "afficher"){
+								}elseif($url[2] == "afficher" && isset($url[3])){
 									if(!isset($url[4])){
 										$userController->afficherDashProjet($url[3]);
 									}else{
@@ -146,6 +146,10 @@ try {
 									{
 										$userController->updateProjet($url[4], $url[3], data_secure($_POST['descriptionProjet']));
 									}
+								}elseif($url[2] == "updateData" && isset($url[3]) && isset($url[4])){
+										$userController->updateDataProjet($_POST,$url[3], $url[4]);
+								}else{
+									throw new Exception("Page introuvable");
 								}
 							}
 						}

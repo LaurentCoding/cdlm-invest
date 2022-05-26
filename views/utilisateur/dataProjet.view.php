@@ -6,7 +6,7 @@
     <?php foreach ($annees as $annee) : ?>
         <?php if ($annee->getName_annee() != "debut N") { ?>
             <li>
-                <form action="<?= URL ?>user/projet/updateData/<?= $annee->getName_annee() ?>" method="POST">
+                <form action="<?= URL ?>user/projet/updateData/<?= $annee->getName_annee() ?>/<?= $projet->getId() ?>" method="POST">
                     <label for="<?= $annee->getName_annee() ?>"><?= $annee->getName_annee() ?></label>
                     <input type="checkbox" id="<?= $annee->getName_annee() ?>" />
                     <ul class="sub">

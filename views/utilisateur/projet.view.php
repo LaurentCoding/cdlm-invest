@@ -1,7 +1,7 @@
 <div class="text_center w_100 mt_20 mb_20">
     <p class="m_5">Projet : <?= $nbrProjet ?> / 3 </p>
-    <?php if($nbrProjet >=3) : ?>
-    <a href="#" class="btn">Débloquer la limite</a>
+    <?php if ($nbrProjet >= 3) : ?>
+        <a href="#" class="btn">Débloquer la limite</a>
     <?php endif ?>
 </div>
 
@@ -29,13 +29,16 @@
                     <textarea name="descriptionProjet" id="descriptionProjet" cols="20" rows="2" class="m_10"><?= $projet->getDescription_projet() ?></textarea>
                     <button type="submit">Modifier</button>
                 </form>
-                
-                
+
+                <div class="p_10">Investissement : <?= $projet->getInvestissement() ?> euros</div>
+                <div class="p_10">nombre d'année(s) : <?= $projet->getDuree() ?> <?php if($projet->getDuree() > 1){echo "ans";}else{echo "an";}?></div>
+
+
                 <a href="<?= URL ?>user/projet/afficher/<?= $projet->getId() ?>" class="btn m_5">Allez</a>
                 <a href="<?= URL ?>user/projet/delete/<?= $projet->getId() ?>" class="btn btn_warning m_5">Supprimer</a>
-                </div>
-            
-            
+            </div>
+
+
         <?php endforeach ?>
     </div>
 
