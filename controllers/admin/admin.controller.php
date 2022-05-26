@@ -1,7 +1,7 @@
 <?php
 // -----------------------------------------------------
-require_once "./models/projetManager.php";
-require_once "./models/userManager.php";
+require_once "./models/manager/projetManager.php";
+require_once "./models/manager/userManager.php";
 
 // class administrateur
 class AdministrateurController extends MainController

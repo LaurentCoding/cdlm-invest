@@ -1,11 +1,11 @@
 <?php
 
 // appelle du usermanager
-require "./models/userManager.php";
+require "./models/manager/userManager.php";
 // appelle profilManager
-require "./models/projetManager.php";
+require "./models/manager/projetManager.php";
 // apelle Anne manager
-require "./models/anneeManager.php";
+require "./models/manager/anneeManager.php";
 // -----------------------------------------------------
 // classe UsersController
 class UtilisateurController extends MainController{
