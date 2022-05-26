@@ -1,6 +1,6 @@
 <?php
 
-require_once "./models/projet.class.php";
+require_once "./models/class/projet.class.php";
 require_once "./models/bdd.php";
 
 class ProjetManager extends Bdd{
