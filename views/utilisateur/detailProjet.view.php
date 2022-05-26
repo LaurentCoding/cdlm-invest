@@ -10,30 +10,21 @@
 </div>
 
 <div id="donnees_entrees">
-    <form action="<?= URL ?>updateDataProjet" method="POST">
-        <table class="text_center">
-            <tr>
-                <th>Année</th>
-                <th>Chiffre d'affaires</th>
-                <th>Achat annuels</th>
-                <th>charges structures</th>
-                <th>amortissements</th>
-                <th>augmentation BFR</th>
-                <th>IS</th>
-            </tr>
-            <?php foreach ($annees as $annee) : ?>
-                <tr>
-                    <td><?= $annee['name_annee'] ?></td>
-                    <td><input type="text" value="<?= $annee['chiffre_affaire'] ?>"></td>
-                    <td><input type="text" value="<?= $annee['achats_annuels'] ?>"></td>
-                    <td><input type="text" value="<?= $annee['charges_structures'] ?>"></td>
-                    <td><input type="text" value="<?= $annee['amortissements'] ?>"></td>
-                    <td><input type="text" value="<?= $annee['augmentation_bfr'] ?>"></td>
-                    <td><input type="text" value="<?= $annee['valeur_residuelle_nette_is'] ?>"></td>
-                </tr>
+    <form action="<?= URL ?>updateDataProjet" method="POST" class="w_100">
 
-            <?php endforeach ?>
-        </table>
+        <?php foreach ($annees as $annee) : ?>
+            <div>
+                <div><?= $annee['name_annee'] ?></div>
+                <div><input type="text" value="<?= $annee['chiffre_affaire'] ?>"></div>
+                <div><input type="text" value="<?= $annee['achats_annuels'] ?>"></div>
+                <div><input type="text" value="<?= $annee['charges_structures'] ?>"></div>
+                <div><input type="text" value="<?= $annee['amortissements'] ?>"></div>
+                <div><input type="text" value="<?= $annee['augmentation_bfr'] ?>"></div>
+                <div><input type="text" value="<?= $annee['valeur_residuelle_nette_is'] ?>"></div>
+            </div>
+
+        <?php endforeach ?>
+
         <button type="submit" class="btn btn_success mt_10 m_auto d_block w_50">Sauvegarder</button>
     </form>
 </div>
