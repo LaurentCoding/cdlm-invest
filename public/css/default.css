@@ -558,11 +558,6 @@ input[type="checkbox"] #toggle {
     height: 50px;
     width: 100%;
   }
-  button {
-    margin-left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
 }
 
 .form_name {

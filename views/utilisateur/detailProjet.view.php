@@ -10,23 +10,23 @@
 </div>
 
 <div id="donnees_entrees">
-    <form action="<?= URL ?>updateDataProjet" method="POST" class="w_100">
+    <form action="<?= URL ?>updateDataProjet" method="POST" class="w_100 d_flex flex_row_wrap">
+        <div class=" d_flex flex_row_wrap">
+            <?php foreach ($annees as $annee) : ?>
+                <div class=" w_25">
+            <div><?= $annee['name_annee'] ?></div>
+            <div><input type="text" value="<?= $annee['chiffre_affaire'] ?>"></div>
+            <div><input type="text" value="<?= $annee['achats_annuels'] ?>"></div>
+            <div><input type="text" value="<?= $annee['charges_structures'] ?>"></div>
+            <div><input type="text" value="<?= $annee['amortissements'] ?>"></div>
+            <div><input type="text" value="<?= $annee['augmentation_bfr'] ?>"></div>
+            <div><input type="text" value="<?= $annee['valeur_residuelle_nette_is'] ?>"></div>
+        </div>
 
-        <?php foreach ($annees as $annee) : ?>
-            <div>
-                <div><?= $annee['name_annee'] ?></div>
-                <div><input type="text" value="<?= $annee['chiffre_affaire'] ?>"></div>
-                <div><input type="text" value="<?= $annee['achats_annuels'] ?>"></div>
-                <div><input type="text" value="<?= $annee['charges_structures'] ?>"></div>
-                <div><input type="text" value="<?= $annee['amortissements'] ?>"></div>
-                <div><input type="text" value="<?= $annee['augmentation_bfr'] ?>"></div>
-                <div><input type="text" value="<?= $annee['valeur_residuelle_nette_is'] ?>"></div>
-            </div>
-
-        <?php endforeach ?>
-
-        <button type="submit" class="btn btn_success mt_10 m_auto d_block w_50">Sauvegarder</button>
-    </form>
+    <?php endforeach ?>
+</div>
+<button type="submit" class="btn btn_success mt_10 m_auto d_block w_50">Sauvegarder</button>
+</form>
 </div>
 
 <!-- script -->
