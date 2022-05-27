@@ -16,7 +16,7 @@
 
 
 </footer>
-
+<script src="../../public/js/hamburger.js"></script>
 <!-- ajout de page js spécifique avec le mainController -->
 <?php if (!empty($page_javascript)) : ?>
     <?php foreach ($page_javascript as $fichier_javascript) : ?>

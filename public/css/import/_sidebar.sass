@@ -11,81 +11,56 @@ header
 
     a:hover
         color: $color_blue
-      
-    
-  
+
 
 #header_logo
   max-width: 100px
-label
+
+
+.hamburger
     display: none
-  
-input[type="checkbox"]
-  -webkit-appearance: none
-  visibility: hidden
-  display: none
+    cursor: pointer
 
 
-  #toggle
-    display: none 
 .bar 
-  position: relative
-  cursor: pointer
-  display: flex
-  justify-content: center
-  &_middle
-    height: 6px
-    width: 60px
-    background-color: $color_white
-    border-radius: 50px
-    position: absolute
-    transition: 0.3s ease
-  &_top
-    bottom: 14px
-    height: 6px
-    width: 60px
-    background-color: $color_white
-    border-radius: 50px
-    position: absolute
-    transition: 0.3s ease
-  &_bottom
-    top: 20px
-    height: 6px
-    width: 60px
-    background-color: $color_white
-    border-radius: 50px
-    position: absolute
-    transition: 0.3s ease
+    display: block
+    width: 25px
+    height: 3px
+    margin: 5px auto
+    -webkit-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    background-color: white
+
 
 @media screen and (max-width: $large) 
-  .menu
-    display: none
-    flex-direction: column  
-    
+
+  .hamburger 
+    display: block
+
+  .hamburger.active .bar:nth-child(2)
+    opacity: 0
+  
+  .hamburger.active .bar:nth-child(1)
+    transform: translateY(8px) rotate(45deg)
+  
+  .hamburger.active .bar:nth-child(3)
+    transform: translateY(-8px) rotate(-45deg)
+  
+
   .menu 
-    position: absolute
+    position: fixed
     top: 80px
-    left: 0
+    left: -100%
     width: 100%
     background: $color_grisf
-    
-    a
-      width: 100%
-      text-align: center
-      padding: 10 0
-      
-  label
-      width: 30px
-      display: flex
-      align-items: center
-      font-size: 40px
-      color: white
-      cursor: pointer
-  #toggle:checked + .menu
-      display: flex
-      transition: 0.5s ease
+    flex-direction: column
+    text-align: center
+    transition: 0.3s
   
-   
+  .menu.active 
+    left: 0
+  
+  
 	
 
 
