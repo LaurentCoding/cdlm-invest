@@ -1,1 +1,2 @@
-<div>Page contact</div>
+
+<h3>Première page de contact</h3>

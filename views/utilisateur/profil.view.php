@@ -1,4 +1,4 @@
-<div class="d_flex flex_column justify_content_around align_items_center">
+<div class="d_flex flex_column  align_items_center">
     <div>
         <table>
             <tr>
@@ -19,10 +19,10 @@
         </table>
 
     </div>
-    <table>
+    <table class="table_profil mt_30 container">
         <tr>
             <td>Email :</td>
-            <td colspan="3"><?= $profil->getEmail() ?></td>
+            <td colspan="4"><?= $profil->getEmail() ?></td>
         </tr>
         <tr>
             <!-- affichage nom -->
@@ -32,7 +32,7 @@
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
             <form action="<?= URL ?>user/profil/name" method="POST">
                 <td><input type="text" name="name" id="name" value="<?= $profil->getName() ?>"></td>
-                <td><button type="submit" class="btn btn_success">Valider</button></td>
+                <td><button type="submit" class="btn btn_valider">Valider</button></td>
             </form>
         </tr>
         <tr>
@@ -43,22 +43,22 @@
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
             <form action="<?= URL ?>user/profil/surname" method="POST">
                 <td><input type="text" name="surname" id="surname" value="<?= $profil->getSurname() ?>"></td>
-                <td><button type="submit" class="btn btn_success">Valider</button></td>
+                <td><button type="submit" class="btn btn_valider">Valider</button></td>
             </form>
         </tr>
         <tr>
             <!-- afficher la company -->
             <td>Société :</td>
             <td><?= $profil->getCompany() ?></td>
-            <td>modifier</td>
+            <td>Modifier</td>
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
             <form action="<?= URL ?>user/profil/company" method="POST">
                 <td><input type="text" name="company" id="company" value="<?= $profil->getCompany() ?>"></td>
-                <td><button type="submit" class="btn btn_success">Valider</button></td>
+                <td><button type="submit" class="btn btn_valider">Valider</button></td>
             </form>
         </tr>
         <tr>
-            <td>
+            <td colspan="5">
                 <form action="<?= URL ?>user/profil/grade_id" method="POST">
                     <select name="grade" id="grade">
                         <?php foreach ($allGrade as $grade) : ?>
