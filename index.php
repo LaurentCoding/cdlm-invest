@@ -153,6 +153,8 @@ try {
 									}else{
 										$userController->updateDataProjet($_POST, $url[3], $url[4]);
 									}
+								}elseif($url[2] == "updateData" && isset($url[3]) && !isset($url[4])){
+									$userController->updateInvestProjet($_POST, $url[3]);
 								}else{
 									throw new Exception("Page introuvable");
 								}

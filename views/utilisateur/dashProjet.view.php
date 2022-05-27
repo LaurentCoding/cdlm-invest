@@ -59,9 +59,9 @@ foreach ($annees as $annee) {
     <p class="card_duree">Durée du projet : <?= $projet->getDuree() ?> ans</p>
     <p>Chiffre d'affaires moyen : <?= $chiffre_affaires_moyen ?> euros</p>
 
-    <pre>
+    <!-- <pre>
         <?= var_dump($flux_economique); ?>
-    </pre>
+    </pre> -->
 
     <div>
         <canvas id="chart_chiffre_affaires" width="300" height="300"></canvas>

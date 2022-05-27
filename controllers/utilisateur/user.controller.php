@@ -142,7 +142,18 @@ class UtilisateurController extends MainController{
         foreach($datas as $key => $value){
             $this->anneManager->updateItemAnnee($key,$value, $id_projet, $annee);
         }
+        Toolbox::ajouterMessageAlerte("Modification pris en compte", Toolbox::COULEUR_VERTE);
         render("user/projet/afficher/".$id_projet."/data","dataProjet");
+    }
+
+    public function updateInvestProjet(array $datas, int $id_projet){
+        if($this->projetManager->modificationProjetBdd($id_projet, "investissement",$datas['investissement'])){
+            Toolbox::ajouterMessageAlerte("modification pris en compte",Toolbox::COULEUR_VERTE);
+            render("user/projet/afficher/" . $id_projet . "/data", "dataProjet");
+        }else{
+            Toolbox::ajouterMessageAlerte("Une erreur est survenue", Toolbox::COULEUR_ORANGE);
+            render("user/projet/afficher/" . $id_projet . "/data", "dataProjet");
+        }
     }
 
     public function afficherDashProjet(int $id)
