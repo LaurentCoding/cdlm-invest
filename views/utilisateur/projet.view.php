@@ -59,7 +59,7 @@
 <?php endif ?>
 
 <?php if ($nbrProjet >= 3) { ?>
-    <button class="btn mt_20" disabled>Maximum de projet atteint</button>
+    <button class="btn mt_20 mb_10" disabled>Maximum de projet atteint</button>
 <?php } else { ?>
     <a href="<?= URL ?>user/projet/new" class="card_newProject btn mt_20">Crée un nouveau projet</a>
 <?php } ?>
@@ -81,7 +81,8 @@
 
     for (i = 0; i < btn_form_card.length; i++) {
         i_event = i
-        btn_form_card[i].addEventListener('click', (event) => { console.log(event)})
+        btn_form_card[i].addEventListener('click', (event) => {
+            console.log(event)
+        })
     }
-
 </script>
