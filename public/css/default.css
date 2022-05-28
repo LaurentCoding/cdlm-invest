@@ -147,6 +147,10 @@ h1 {
   margin: 20px;
 }
 
+.m_50 {
+  margin: 50px;
+}
+
 .mr_5 {
   margin-right: 5px;
 }
@@ -794,7 +798,7 @@ input {
   padding-left: 10px;
 }
 
-input[type=text] {
+.table_profil input[type=text] {
   font-size: 1.2em;
   border: none;
   background-color: transparent;
@@ -802,7 +806,7 @@ input[type=text] {
   width: 60%;
 }
 
-input[type=text]:hover {
+.table_profil input[type=text]:hover {
   background-color: #7a965f;
   color: white;
 }
@@ -879,6 +883,24 @@ button[type=submit] {
   .acceuil_image {
     width: 50%;
   }
+}
+
+.sitePresentation_recherche {
+  background-color: #80858e;
+}
+
+.sitePresentation .btn_sitePresentation {
+  background-color: #4a323c;
+  color: white;
+  border: none;
+}
+
+.expertise_image {
+  width: 100%;
+}
+
+.expertise_text {
+  text-align: justify;
 }
 
 #img_404 {

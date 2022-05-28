@@ -22,6 +22,6 @@
         </div>
         
     
-    <button type="submit" class="btn btn_project mt_30 align_items_center">Crée</button>
+    <button type="submit" class="btn  mt_30 align_items_center">Crée</button>
 
 </form>
