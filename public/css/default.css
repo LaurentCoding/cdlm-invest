@@ -430,9 +430,7 @@ h1 {
 }
 
 .btn_update_card {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+  text-align: end;
 }
 
 .d1 {
@@ -783,6 +781,8 @@ input {
   color: white;
   border-radius: 5px;
   padding: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .table_profil {
@@ -805,11 +805,14 @@ input {
 }
 
 .table_profil input[type=text] {
-  font-size: 1.2em;
+  font-weight: bold;
   border: none;
   background-color: transparent;
   color: #4a323c;
   width: 60%;
+  display: block;
+  margin: auto;
+  width: 100%;
 }
 
 .table_profil input[type=text]:hover {
@@ -817,9 +820,13 @@ input {
   color: white;
 }
 
-button[type=submit] {
-  font-size: 1.2em;
+.table_profil button[type=submit] {
   background-color: transparent;
+  margin: 5px;
+}
+
+.table_profil button[type=submit]:hover {
+  background: #d1a52c;
 }
 
 #accordeon {

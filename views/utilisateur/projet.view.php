@@ -23,17 +23,17 @@
                     </form>
                 </div>
                 <!-- affichage description -->
-                <div class="d_flex justify_content_around">
+                <div class="d_flex justify_content_center align_items_center">
                     <h3 class="p_10 card_description"><?= $projet->getDescription_projet() ?></h3>
 
                     <!-- afficher modifier description -->
-                    <form class=" form_description_projet d_flex flex_column align_items_center justify_content_center" action="<?= URL ?>user/projet/update/description_projet/<?= $projet->getId() ?>" method="POST">
+                    <form class="form_description_projet d_flex flex_column align_items_center justify_content_center" action="<?= URL ?>user/projet/update/description_projet/<?= $projet->getId() ?>" method="POST">
                         <textarea name="descriptionProjet" id="descriptionProjet" cols="20" rows="2" class="m_10 br_5 p_5"><?= $projet->getDescription_projet() ?></textarea>
                         <button class="card_projet-btn btn  mt_10" type="submit">Modifier</button>
                     </form>
                 </div>
 
-                <div class="d_flex justify_content_around ">
+                <div class="d_flex justify_content_around flex_row_wrap">
                     <div class="p_10">Investissement : <?= $projet->getInvestissement() ?> euros</div>
                     <div class="p_10">nombre d'année(s) : <?= $projet->getDuree() ?>
                         <?php if ($projet->getDuree() > 1) {
@@ -43,7 +43,7 @@
                         } ?></div>
                 </div>
 
-                <div class="m_20">
+                <div class="m_20 d_flex justify_content_center flex_row_wrap">
                     <a href="<?= URL ?>user/projet/afficher/<?= $projet->getId() ?>" class="btn btn_project m_5">Voir</a>
                     <a href="<?= URL ?>user/projet/delete/<?= $projet->getId() ?>" class="btn btn_warning m_5">Supprimer</a>
                 </div>

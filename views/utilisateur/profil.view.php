@@ -17,57 +17,52 @@
                 </form>
             </tr>
         </table>
-
     </div>
+    
     <table class="table_profil mt_30 container">
         <tr>
-            <td>Email :</td>
-            <td colspan="4"><?= $profil->getEmail() ?></td>
+            <td class="text_end p_5">Email :</td>
+            <td class="text_center"><?= $profil->getEmail() ?></td>
+            <td></td>
         </tr>
         <tr>
-            <!-- affichage nom -->
-            <td>Nom :</td>
-            <td><?= $profil->getName() ?></td>
-            <td>Modifier</td>
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
             <form action="<?= URL ?>user/profil/name" method="POST">
+                <td class="text_end">Nom :</td>
                 <td><input type="text" name="name" id="name" value="<?= $profil->getName() ?>"></td>
-                <td><button type="submit" class="btn btn_valider">Valider</button></td>
+                <td class="text_center"><button type="submit" class="btn btn_valider"><i class="fa-solid fa-pen"></i></button></td>
             </form>
         </tr>
         <tr>
-            <!-- afficher prenom -->
-            <td>Prenom :</td>
-            <td><?= $profil->getSurname() ?></td>
-            <td>Modifier</td>
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
             <form action="<?= URL ?>user/profil/surname" method="POST">
+                <td class="text_end p_5">Prenom :</td>
                 <td><input type="text" name="surname" id="surname" value="<?= $profil->getSurname() ?>"></td>
-                <td><button type="submit" class="btn btn_valider">Valider</button></td>
+                <td class="text_center"><button type="submit" class="btn btn_valider"><i class="fa-solid fa-pen"></i></button></td>
             </form>
         </tr>
         <tr>
-            <!-- afficher la company -->
-            <td>Société :</td>
-            <td><?= $profil->getCompany() ?></td>
-            <td>Modifier</td>
             <!-- a gèrer avec le JS pour affichier si on clic sur modifier -->
+            <td class="text_end p_5">Société :</td>
             <form action="<?= URL ?>user/profil/company" method="POST">
                 <td><input type="text" name="company" id="company" value="<?= $profil->getCompany() ?>"></td>
-                <td><button type="submit" class="btn btn_valider">Valider</button></td>
+                <td class="text_center"><button type="submit" class="btn btn_valider"><i class="fa-solid fa-pen"></i></button></td>
             </form>
         </tr>
-        <tr>
-            <td colspan="5">
-                <form action="<?= URL ?>user/profil/grade_id" method="POST">
-                    <select name="grade" id="grade">
+        <tr>>
+            <form action="<?= URL ?>user/profil/grade_id" method="POST">
+                <td class="text_end">Grade :</td>
+                <td>
+                    <select name="grade" id="grade" class="w_100">
                         <?php foreach ($allGrade as $grade) : ?>
-                            <option value="<?= $grade['id'] ?>" <?php if($grade['id'] == $gradeSelect[0]['id']){ ?> selected <?php } ?>><?= $grade['name_profil'] ?></option>
+                            <option value="<?= $grade['id'] ?>" <?php if ($grade['id'] == $gradeSelect[0]['id']) { ?> selected <?php } ?>><?= $grade['name_profil'] ?></option>
                         <?php endforeach ?>
                     </select>
-                    <button type="submit">Modifier</button>
-                </form>
-            </td>
+                </td>
+                <td class="text_center">
+                    <button class="btn btn_valider" type="submit"><i class="fa-solid fa-pen"></i></button>
+                </td>
+            </form>
         </tr>
     </table>
 </div>

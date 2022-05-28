@@ -34,6 +34,8 @@
     color: $color_white
     border-radius: 5px
     padding: 5px
+    text-align: center
+    font-weight: bold
 
 .table_profil
     table-layout: fixed
@@ -48,17 +50,22 @@
         padding-left: 10px
 
     input[type=text]
-        font-size: 1.2em
+        font-weight: bold
         border: none 
         background-color: transparent 
         color: $color_marron
         width: 60%
+        display: block
+        margin: auto
+        width: 100%
         &:hover
             background-color: $color_green 
             color: $color_white
 
-button[type=submit]
-    font-size: 1.2em
-    background-color: transparent 
-   
+    button[type=submit]
+        background-color: transparent 
+        margin: 5px
+        &:hover
+            background: $warning
+
 
