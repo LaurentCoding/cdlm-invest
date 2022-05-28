@@ -38,7 +38,7 @@ class VisiteurController extends MainController
 
     public function AfficherQuiSommesNous(){
         $data_page = [
-            "page_titre"    => "Page qui sommes-nous?",
+            "page_titre"    => "",
             "view"          => "./views/visiteur/sommesNous.view.php",
             "template"      => "./views/commun/template.php"
         ];
@@ -46,7 +46,7 @@ class VisiteurController extends MainController
     }
     public function AfficherNosExpertises(){
         $data_page = [
-            "page_titre"    => "Nos Expertises",
+            "page_titre"    => "",
             "view"          => "./views/visiteur/expertise.view.php",
             "template"      => "./views/commun/template.php"
         ];
@@ -54,7 +54,7 @@ class VisiteurController extends MainController
     }
     public function afficherNosSolutions(){
         $data_page = [
-            "page_titre"    => "Nos solutions",
+            "page_titre"    => "",
             "view"          => "./views/visiteur/solution.view.php",
             "template"      => "./views/commun/template.php"
         ];
