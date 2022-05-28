@@ -429,6 +429,12 @@ h1 {
   background-color: white;
 }
 
+.btn_update_card {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
 .d1 {
   background: red;
 }
