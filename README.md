@@ -9,7 +9,7 @@ entreprise : CDLM@INVEST
 
 --------------
 
-- [ ] design général
+- [X] design général
 - [X] mise en place architecture du SASS
 - [x] Back inscription
 - [x] Front js inscription vérification (email, password,..)
@@ -17,6 +17,9 @@ entreprise : CDLM@INVEST
 - [x] Front js connexion vérification (email)
 - [x] Back profil
 - [x] Back modification profil
-- [ ] Front js effect modification profil
-- [ ] Back projet
-- [ ] Front projet
+- [x] Front js effect modification projet
+- [X] Back projet
+- [] Front projet design dashboard
+- [] Réalisation blog back
+- [] Réalisation blog front
+- ..
