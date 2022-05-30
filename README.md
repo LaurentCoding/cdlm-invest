@@ -22,4 +22,4 @@ entreprise : CDLM@INVEST
 - [ ] Front projet design dashboard
 - [ ] Réalisation blog back
 - [ ] Réalisation blog front
-- [ ]..
+- [ ] ...
