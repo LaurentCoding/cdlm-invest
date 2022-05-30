@@ -19,7 +19,7 @@ entreprise : CDLM@INVEST
 - [x] Back modification profil
 - [x] Front js effect modification projet
 - [X] Back projet
-- [] Front projet design dashboard
-- [] Réalisation blog back
-- [] Réalisation blog front
-- ..
+- [ ] Front projet design dashboard
+- [ ] Réalisation blog back
+- [ ] Réalisation blog front
+- [ ]..
