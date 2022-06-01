@@ -193,21 +193,26 @@ class UtilisateurController extends MainController{
     }
     public function goConnection(array $array)
     {
-
-        if($this->userManager->verifCombinaison($array))
-        {
-            $utilisateurData = $this->userManager->getInformationUser($array['email']);
-            $_SESSION['connect']        = 1;
-            $_SESSION['messageConnect'] = 1;
-            $_SESSION['email']          = $utilisateurData->getEmail();
-            $_SESSION['name']           = $utilisateurData->getName();
-            $_SESSION['surname']        = $utilisateurData->getSurname();
-            $_SESSION['admin']          = $utilisateurData->getIs_admin();
-            $_SESSION['avatar']         = $utilisateurData->getAvatar();
-            $_SESSION['id']             = $utilisateurData->getId();
-            render("accueil","accueil");
+        if(!$this->userManager->emailDisponible($array['email'])){
+            if($this->userManager->verifCombinaison($array))
+            {
+                $utilisateurData = $this->userManager->getInformationUser($array['email']);
+                $_SESSION['connect']        = 1;
+                $_SESSION['messageConnect'] = 1;
+                $_SESSION['email']          = $utilisateurData->getEmail();
+                $_SESSION['name']           = $utilisateurData->getName();
+                $_SESSION['surname']        = $utilisateurData->getSurname();
+                $_SESSION['admin']          = $utilisateurData->getIs_admin();
+                $_SESSION['avatar']         = $utilisateurData->getAvatar();
+                $_SESSION['id']             = $utilisateurData->getId();
+                Toolbox::ajouterMessageAlerte("Bonjour ".$_SESSION['surname'], Toolbox::COULEUR_VERTE);
+                render("accueil","accueil");
+            }else{
+                Toolbox::ajouterMessageAlerte("Combinaison EMAIL/MDP fausse",Toolbox::COULEUR_ORANGE);
+                render("connexion","connexion");
+            }
         }else{
-            Toolbox::ajouterMessageAlerte("Combinaison EMAIL/MDP fausse",Toolbox::COULEUR_ORANGE);
+            Toolbox::ajouterMessageAlerte("Email ou Password invalide",Toolbox::COULEUR_ORANGE);
             render("connexion","connexion");
         }
     }

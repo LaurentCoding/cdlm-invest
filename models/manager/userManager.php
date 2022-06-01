@@ -9,8 +9,13 @@ class UserManager extends Bdd{
 
     public function emailDisponible(string $email)
     {
-        $utilisateurEmail = $this->getInformationUser($email);
-        return empty($utilisateurEmail);
+        $req    = "SELECT * FROM user WHERE email = :email";
+        $stmt   = $this->getBdd()->prepare($req);
+        $stmt->bindValue(':email',$email,PDO::PARAM_STR);
+        $stmt->execute();
+        $existant = $stmt->rowCount() > 0;
+        $stmt->closeCursor();
+        return !$existant;
     }
 
     public function verifCombinaison(array $array)
@@ -21,14 +26,12 @@ class UserManager extends Bdd{
 
     public function getInformationUser(string $email)
     {
-        $informationUser = [];
         $req    = "SELECT * FROM user WHERE email = :email";
         $stmt   = $this->getBdd()->prepare($req);
         $stmt->bindValue(':email',$email,PDO::PARAM_STR);
         $stmt->execute();
         $resultat = $stmt->fetchAll();
         $stmt->closeCursor();
-        
         return new User($resultat[0]);
     }
 
