@@ -7,7 +7,7 @@ Dans le cadre du projet fintech by STUDI, nous réalisons une app web.
 **Entreprise** : CDLM@INVEST
 
 
-=====
+__________________
 
 ```
 $ git clone https://github.com/LaurentCoding/cdlm-invest.git
