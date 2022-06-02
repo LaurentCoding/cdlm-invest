@@ -4,8 +4,15 @@ __FINTECH PROJET PHP MVC__
 
 Dans le cadre du projet fintech by STUDI, nous réalisons une app web.
 
-entreprise : CDLM@INVEST
+**Entreprise** : CDLM@INVEST
 
+
+=====
+
+```
+$ git clone https://github.com/LaurentCoding/cdlm-invest.git
+$ cd cdlm-invest
+```
 
 --------------
 
