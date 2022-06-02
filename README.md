@@ -1,4 +1,4 @@
-__FINTECH PROJET PHP MVC__
+__FINTECH PROJET PHP Modèle MVC__
 =====
 
 
@@ -9,12 +9,16 @@ Dans le cadre du projet fintech by STUDI, nous réalisons une app web.
 
 __________________
 
+Installer projet en local : * *(besoin d'un serveur local)* *
 ```
 $ git clone https://github.com/LaurentCoding/cdlm-invest.git
 $ cd cdlm-invest
 ```
 
---------------
+sur Wamp : dans le dossier www
+sur xamp : dans le dossier htdoc
+
+__________________
 
 - [X] design général
 - [X] mise en place architecture du SASS
